@@ -13,39 +13,39 @@
         "imagenperfil": "https://avatars.githubusercontent.com/u/94482314?v=4"
         
       },
-    "experiencie":[
+    "experiencia":[
       
       {
-        "position":"Encargado - Jefe de personal",
-        "company": "WaflesSur - Patagonia",
-        "description": "Organización y Control general de operaciones, logística y personal ",
+        "cargo":"Encargado - Jefe de personal",
+        "empresa": "WaflesSur - Patagonia",
+        "descrip": "Organización y Control general de operaciones, logística y personal ",
         "img": "#",
-        "mode": "Jornada completa",
-        "start": "Dic 2021",
-        "end": "Actualidad",
-        "timeElapsed": "Trabajo por temporada"
+        "modalidad": "Jornada completa",
+        "inicio": "Dic 2021",
+        "fin": "Actualidad",
+        "duracion": "Trabajo por temporada"
 
     },
     {
-      "position":"Gasista/Electricista Instalador",
-      "company": "Autónomo",
-      "description": "Proyección, diseño y ejecución de obras en instalaciones de gas/eléctricas domésticas/comerciales, conexión de artefactos",
+      "cargo":"Gasista/Electricista Instalador",
+      "empresa": "Autónomo- independiente",
+      "descrip": "Proyección, diseño y ejecución de obras en instalaciones de gas/eléctricas domésticas/comerciales, conexión de artefactos",
       "img": "#",
-      "mode": "Jornada completa",
-      "start": "Noviembre 2019",
-      "end": "Actualidad",
-      "timeElapsed": "Actualidad"
+      "modalidad": "Jornada completa",
+      "inicio": "Noviembre 2019",
+      "fin": "Actualidad",
+      "duracion": "Actualidad"
 
   },
       {
-        "position":"Ingeniero Inspector mecánico de Construcción - Pipelines/Piping",
-        "company": "Petróleos de Venezuela S.A - PDVSA",
-        "description": "Inspección mecánica obras de construcción Piping/Pipelines, conexión de pozos, estaciones de bombeo y facilidades de superficie",
+        "cargo":"Ingeniero Inspector mecánico de Construcción - Pipelines/Piping",
+        "empresa": "Petróleos de Venezuela S.A - PDVSA",
+        "descrip": "Inspección mecánica obras de construcción Piping/Pipelines, conexión de pozos, estaciones de bombeo y facilidades de superficie",
         "img": "http://www.minpet.gob.ve/images/entes_adscritos/pdvsa.png",
-        "mode": "Jornada completa",
-        "start": "Noviembre 2011",
-        "end": "Julio 2017",
-        "timeElapsed": "5 años y 8 meses"
+        "modalidad": "Jornada completa",
+        "inicio": "Noviembre 2011",
+        "fin": "Julio 2017",
+        "duracion": "5 años y 8 meses"
     }
     ],
     "educacion":[
@@ -57,6 +57,7 @@
         "puntaje": "240 Horas - modalidad Virtual",
         "inicio": "2021",
         "fin": "actualidad",
+        "status": "en curso",
         "url": "https://empleo.chaco.gob.ar/cenit#/"
     },
       {
@@ -67,6 +68,7 @@
         "puntaje": "240 Horas - modalidad Virtual",
         "inicio": "2021",
         "fin": "2021",
+        "status": "Culminado",
         "url": "https://empleo.chaco.gob.ar/cenit#/"
     },
     {
@@ -77,6 +79,7 @@
       "puntaje": "En espera del certificado",
       "inicio": "2019",
       "fin": "2020",
+      "status": "Culminado, esperando certificado",
       "url": "https://fundacion.uocra.org/"
   },
   {
@@ -87,6 +90,7 @@
     "puntaje": "Instalaciones domiciliarias",
     "inicio": "2019",
     "fin": "2020",
+    "status": "Culminado",
     "url": "https://suterh.org.ar/anexo-jujuy/"
 },
     {
@@ -97,6 +101,7 @@
         "puntaje": "Incompleto",
         "inicio": "2014",
         "fin": "2017",
+        "status": "Incompleto - Interrumpido",
         "url": "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjziqGhquD2AhXiIbkGHeX7BiAQFnoECAQQAQ&url=http%3A%2F%2Fwww.pdvsa.com%2Findex.php%3Foption%3Dcom_content%26view%3Darticle%26id%3D8936%3Auniversidad-venezolana-de-los-hidrocarburos-dictara-maestria-en-gestion-de-datos-en-exploracion-y-produccion-de-petroleo%26catid%3D10%3Anoticias%26Itemid%3D5%26lang%3Des&usg=AOvVaw0VCBz_RS7069qWj4O4N0f8"
     },
     {
@@ -107,6 +112,7 @@
       "puntaje": "4.23/5",
       "inicio": "2004",
       "fin": "2010",
+      "status": "Culminado",
       "url": "https://cujae.edu.cu/"
   }
     

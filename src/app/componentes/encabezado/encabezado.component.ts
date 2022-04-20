@@ -6,6 +6,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./encabezado.component.css']
 })
 export class EncabezadoComponent implements OnInit {
+  title ='encabezado';
   miPortfolio: any;
 
   constructor(private datosPortfolio : PortfolioService ) { }
