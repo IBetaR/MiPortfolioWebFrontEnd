@@ -1,14 +1,17 @@
 {  
-    "encabezado": {
+    "encabezado": 
+      {
         "titulo": "Mi Portfolio Web Full Stack",
         "github": "https://github.com/IBetaR",
         "instagram": "Ilich Betancourt Rangel",
         "webprofesional": "https://ilcloudbet.com/"
+    
       },
 
-      "acerca-de": {
-        "titulocomp": "Acerca de mi",
-        "nombre": "Ilich Betancourt Rangel",
+      "acerca-de": 
+      {
+        "nombrecompleto": "Ilich Betancourt Rangel",
+        "titulo": "Acerca de mi",
         "resumencv": "Ingeniero Mecánico etc. etc.",
         "imagenperfil": "https://avatars.githubusercontent.com/u/94482314?v=4"
         
@@ -16,19 +19,19 @@
     "experiencia":[
       
       {
-        "cargo":"Encargado - Jefe de personal",
+        "cargo":"Encargado General - Jefe de personal",
         "empresa": "WaflesSur - Patagonia",
-        "descrip": "Organización y Control general de operaciones, logística y personal ",
+        "descrip": "Organización y Control general de operaciones, logística y personal",
         "img": "#",
         "modalidad": "Jornada completa",
         "inicio": "Dic 2021",
-        "fin": "Actualidad",
+        "fin": "Abr 2022",
         "duracion": "Trabajo por temporada"
 
     },
     {
       "cargo":"Gasista/Electricista Instalador",
-      "empresa": "Autónomo- independiente",
+      "empresa": "Autónomo - Independiente",
       "descrip": "Proyección, diseño y ejecución de obras en instalaciones de gas/eléctricas domésticas/comerciales, conexión de artefactos",
       "img": "#",
       "modalidad": "Jornada completa",
@@ -36,11 +39,11 @@
       "fin": "Actualidad",
       "duracion": "Actualidad"
 
-  },
+    },
       {
         "cargo":"Ingeniero Inspector mecánico de Construcción - Pipelines/Piping",
         "empresa": "Petróleos de Venezuela S.A - PDVSA",
-        "descrip": "Inspección mecánica obras de construcción Piping/Pipelines, conexión de pozos, estaciones de bombeo y facilidades de superficie",
+        "descrip": "Inspección mecánica en obras de construcción Piping/Pipelines, conexión de pozos, estaciones de bombeo y facilidades de superficie en peraciones de producción y perforación",
         "img": "http://www.minpet.gob.ve/images/entes_adscritos/pdvsa.png",
         "modalidad": "Jornada completa",
         "inicio": "Noviembre 2011",
@@ -53,8 +56,8 @@
         "centro":"Argentina Programa",
         "titulo": "Desarrollador Web Full Stack Jr.",
         "img": "https://argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/sliderimage1/1645588080/Banner4.png",
-        "descrip": "Desarrollo Web Back End & Front End - SprintBoot/Angular CLI",
-        "puntaje": "240 Horas - modalidad Virtual",
+        "descrip": "Desarrollo Web Back End & Front End/ Java/NetBeans IDE/SprintBoot/Angular CLI",
+        "puntaje": "Cursando modalidad Virtual",
         "inicio": "2021",
         "fin": "actualidad",
         "status": "en curso",
@@ -62,13 +65,13 @@
     },
       {
         "centro":"Programa INFORMATORIO - Cenit",
-        "titulo": "Curso de Desarrollo Web",
+        "titulo": "Desarrollo Web",
         "img": "https://empleo.chaco.gob.ar/static/media/logoCapHeaderv2.2fe2a41f.png",
-        "descrip": "Desarrollo Web con Python y Django/Base de Datos con MSQL server",
+        "descrip": "Desarrollo Web lenguaje Python - Django Framework/Base de Datos con MSQL server",
         "puntaje": "240 Horas - modalidad Virtual",
         "inicio": "2021",
         "fin": "2021",
-        "status": "Culminado",
+        "status": "Culminado - certificado",
         "url": "https://empleo.chaco.gob.ar/cenit#/"
     },
     {
@@ -97,7 +100,7 @@
         "centro":"Universidad Venezolana de los Hidrocarburos - UVH",
         "titulo": "Maestría en Caracterización y Explotación de Yacimientos",
         "img": "https://pbs.twimg.com/profile_images/903642941499080704/ioXQc1KJ_400x400.jpg",
-        "descrip": "Exploración y Producción petrolera crudos extrapesados Faja Petrolífera del Orinoco",
+        "descrip": "Exploración y Producción petrolera crudos extrapesados Faja Petrolífera del Orinoco - Venezuela",
         "puntaje": "Incompleto",
         "inicio": "2014",
         "fin": "2017",
@@ -118,17 +121,12 @@
     
 
     ],
+
     
-    "aptitudes": [
+    "hyss": [
         {
-          "name": "Resolución de problemas",
-          "progress": 75,
-          "confirms": 2,
-          "confirmsNames": [
-            {
-              "name": "Nikolai Emmanuel Bayro Jablonski"
-            }
-          ]
+          "nombre": "Resolución de problemas",
+          "porcentaje": 75
         },
         {
           "name": "Diseño de Sistemas",
@@ -140,15 +138,42 @@
           ]
         }
       ],
-      "achivements": [
+      "pyl": [
         {
-          "name": "Huaro App"
+          "nombre": "Desarrollo Portfolio Web personal",
+          "descrip": "Creación de Portfolio personal editable - Back end y Front end",
+          "url": ""
         },
         {
-          "name": "Lanterns 19/09"
+          "nombre": "ilcloudbet - Desarrollos Web",
+          "descrip": "Creación de páginas Web profesionales con WordPress - Constructor DIVI",
+          "url": ""
+        },
+        {
+          "nombre": "Balneario Las Grutas Turismo - Desarrollos Web",
+          "descrip": "Creación de página Web al servicio del Turismo en las Grutas - Río Negro",
+          "url": ""
         }
-      ]
-    
-    
+      ],
 
+
+      "referencias": [
+        {
+          "nombre": "Andrea Reyes",
+          "linkedin":"https://www.linkedin.com/in/andreapaolareyes?challengeId=AQFj5f58gCxrWwAAAYBYQoPFCPU_cOlZlEaJzhVfGNBxLT4mVZfPOGmNyVhhcPnG56Uyh2aBF3wwjXcO3H8wMMCF4dF105q8XQ&submissionId=079b58d9-bca2-e816-cad5-4b2ef0f52906"
+        },
+        {
+          "nombre": "Jean Carlos Gómez",
+          "linkedin":""
+        },
+        {
+          "nombre": "Manuel Belice",
+          "linkedin":""
+        },
+        {
+          "nombre": "Ricardo Mendez",
+          "Instagram":""
+        }
+
+      ]
 }

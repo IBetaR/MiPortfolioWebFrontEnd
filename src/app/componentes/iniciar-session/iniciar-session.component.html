@@ -5,10 +5,12 @@
 <header class="container" >
     <div class="container" style="padding: 10em;">
     <h1 class="m-5">Iniciar Sesión</h1>
-<form [formGroup]="form" class="m-5">
+
+<form [formGroup]="form" class="m-5" (ngSubmit)="onEnviar($event)">
     <div class="mb-3">
         <label for="exampleInputEmail" class="form-label">Email address</label>
-        <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" 
+        <input type="email" formControlName="email" 
+        [ngClass]="{'is-invalid':Email?.errors && Email?.touched, 'is-valid':!Email?.errors && Email?.touched}" class="form-control" id="exampleInputEmail1" 
         aria-describedby="emailHelp">
         <div *ngIf="Email?.errors && Email?.touched">
             <p *ngIf="Email?.hasError('required')" class="text-danger">
@@ -21,7 +23,9 @@
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+        <input type="password" formControlName="password" 
+        [ngClass]="{'is-invalid':Password?.errors && Password?.touched, 'is-valid':!Password?.errors && Password?.touched}"
+        class="form-control" id="exampleInputPassword1">
         <div *ngIf="Password?.errors && Password?.touched">
             <p *ngIf="Password?.hasError('required')" class="text-danger">
                 La contraseña es requerida
@@ -36,5 +40,7 @@
     <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 </div>  
+
+
 
 
