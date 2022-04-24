@@ -15,6 +15,8 @@ import { ExperienciaComponent } from './componentes/experiencia/experiencia.comp
 import { PiePaginaComponent } from './componentes/pie-pagina/pie-pagina.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { HttpClientModule } from '@angular/common/http';
+import { IdiomasComponent } from './componentes/idiomas/idiomas.component';
+import { ReferenciasComponent } from './componentes/referencias/referencias.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,9 @@ import { HttpClientModule } from '@angular/common/http';
     EducacionComponent,
     ExperienciaComponent,
     PiePaginaComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    IdiomasComponent,
+    ReferenciasComponent
   ],
   imports: [
     BrowserModule,
