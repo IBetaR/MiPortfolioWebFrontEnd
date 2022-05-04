@@ -8,7 +8,7 @@ import { PortfolioComponent } from './componentes/portfolio/portfolio.component'
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
 import { Pagina404Component } from './componentes/pagina404/pagina404.component';
 import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HAndSskillsComponent } from './componentes/h-and-sskills/h-and-sskills.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
@@ -17,6 +17,7 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 import { HttpClientModule } from '@angular/common/http';
 import { IdiomasComponent } from './componentes/idiomas/idiomas.component';
 import { ReferenciasComponent } from './componentes/referencias/referencias.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { ReferenciasComponent } from './componentes/referencias/referencias.comp
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

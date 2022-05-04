@@ -9,10 +9,23 @@ import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
   styleUrls: ['./iniciar-session.component.css']
 })
 export class IniciarSessionComponent implements OnInit {
-  form: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private autenticacionService: AutenticacionService, private ruta:Router) {
-    this.form = this.formBuilder.group(
+  //usuario: string = "ilichbr@gmail.com";
+  //password: string = "password";
+
+
+  form: FormGroup;
+  loginError: Boolean = false;
+
+  constructor(
+
+    private autenticacionService: AutenticacionService,
+    private ruta:Router,
+    private formBuilder: FormBuilder
+      
+    ) {
+    this.form = this.formBuilder.group
+    (
       {
         email: ['', [Validators.required, Validators.email]],
         password: ['', [Validators.required, Validators.minLength(8)]],
@@ -22,20 +35,32 @@ export class IniciarSessionComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
   }
+
+  onSubmit(event:Event){
+    event.preventDefault;
+
+    this.autenticacionService.IniciarSesion(this.form.value).subscribe(
+      (response: Boolean) => {
+        if (response)
+          this.ruta.navigate(['/portfolio']);
+          else
+          this.loginError = true;
+
+      }
+          //data=>{
+          // console.log("DATA:" + JSON.stringify(data));
+          // this.ruta.navigate(['/porfolio'])
+          //}
+    )
+  }
+
   get Email() {
     return this.form.get('email');
   }
   get Password() {
     return this.form.get('password');
-  }
-
-  onEnviar(event:Event){
-    event.preventDefault;
-    this.autenticacionService.IniciarSesion(this.form.value).subscribe(data=>{
-      console.log("DATA:" + JSON.stringify(data));
-      this.ruta.navigate(['/porfolio'])
-    })
   }
 
 }

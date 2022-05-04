@@ -1,3 +1,61 @@
+<div id="idioma">
+
+    <div class="modal fade" id="idiomasForm" tabindex="-1" aria-labelledby="idiomasFormLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="idiomasFormLabel">Idiomas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form [formGroup]="idiomasForm"(ngSubmit)="onSubmit()">
+                <input type="hidden" name="id" formControlName="id">
+    
+                <div class="row mb-3">
+                  <label for="school" class="col-sm-2 col-form-label">Idioma</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="idioma" formControlName="idioma" class="form-control" required>
+                  </div>
+                </div>
+    
+                <div class="row mb-3">
+                  <label for="title" class="col-sm-2 col-form-label">Nivel</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="nivel" formControlName="nivel" class="form-control" required>
+                  </div>
+                </div>
+    
+                <div class="row mb-3">
+                    <label for="title" class="col-sm-2 col-form-label">Habla</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="habla" formControlName="habla" class="form-control" required>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="title" class="col-sm-2 col-form-label">Lee</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="lee" formControlName="lee" class="form-control" required>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="title" class="col-sm-2 col-form-label">Escribe</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="escribe" formControlName="escribe" class="form-control" required>
+                    </div>
+                  </div>
+    
+                <div class="text-center">
+                  <button type="button" class="btn btn-secondary me-4" data-bs-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+       
+
+      
 <header class="container-fluid">
 <body
     class="page-template-default page page-id-219166 theme-Divi woocommerce-js et_pb_button_helper_class et_fullwidth_nav et_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_footer_columns4 et_cover_background et_pb_gutter osx et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db chrome">
@@ -50,9 +108,7 @@
                                             </div>
                                         </div>
                                         
-                                            
                                         
-
 
                                     </div>
                                 
@@ -66,33 +122,3 @@
     </div>
 </body>
 
-<div class="card-group">
-    <div class="card">
-      
-      <div class="card-body">
-        <h5 class="card-title"><div class="container" id="profile-background"><img id="info-back-img"
-            src="https://argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/sliderimage1/1645588080/Banner4.png"
-            alt="Imagen de fondo" width="full" height="full">
-        </div></h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
-</header>

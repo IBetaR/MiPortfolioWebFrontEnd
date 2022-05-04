@@ -7,9 +7,8 @@ import { Pagina404Component } from './componentes/pagina404/pagina404.component'
 
 const routes: Routes = [
   { path: 'portfolio', component: PortfolioComponent },
-  { path: 'iniciar-sesion', component: IniciarSessionComponent },
-  { path: '',redirectTo:'iniciar-sesion', pathMatch: 'full'},
-  
+  { path: 'iniciar-session', component: IniciarSessionComponent },
+  { path: '',redirectTo:'portfolio', pathMatch: 'full'},
   
   { path: '**', pathMatch:'full', component: Pagina404Component}
 

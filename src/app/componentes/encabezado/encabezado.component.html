@@ -1,5 +1,5 @@
 
-
+<div id="encabezado">
 <body
     class="page-template-default page page-id-219162 theme-Divi woocommerce-js et_pb_button_helper_class et_fullwidth_nav et_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_footer_columns4 et_cover_background et_pb_gutter et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db chrome">
     <div id="page-container" style="padding-top: 10px; margin-top: -1px;" class="et-animated-content">
@@ -8,7 +8,7 @@
             <div class="container clearfix et_menu_container">
                 <div class="title_container">
                     <h1>
-                        <a title="Divi Builder Layout Pack">Portfolio Web</a>
+                        <a title="Divi Builder Layout Pack"><i class="fa fa-code" style="color: rgb(0, 226, 192);" aria-hidden="true"></i>  Portfolio Web</a>
                         <a href="#" title="Divi Builder Layout Pack">{{miPortfolio.titulo}}</a>
                     </h1>
 
@@ -20,62 +20,59 @@
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219161">
                                 
                                 <a href="https://github.com/IBetaR" class="icon">
-                                    <span><i class="fab fa-github"><p>github</p></i></span>
+                                    <span><i class="fa fa-github" aria-hidden="true"></i></span>
                                 </a>
                             </li>
                             <li id="menu-item-219163"
                                 class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-219162 current_page_item menu-item-219163">
-                                <a href="Instagram" aria-current="page">Instagram</a>
+                                <a href="Instagram" aria-current="page"><i class="fa fa-user-o" aria-hidden="true"></i></a>
                             </li>
                             <li id="menu-item-219165"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219165"><a
                                     href="#">Web profesional</a>
                             </li>
-                            <!--<li id="menu-item-219167"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219167"><a
-                                    href="#">Experiencia</a>
-                            </li>
-                            <li id="menu-item-219169"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219169"><a
-                                    href="#">Portfolio</a>
-                            </li>-->
+                            
                             <li id="menu-item-219171"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219171">
                                 
-                                <button type="button" class="btn btn-primary btn-sm">Login</button>
+                                <button type="button" style="background-color: rgb(31, 222, 178); border: rgb(249, 247, 247);"  class="btn btn-primary btn-sm" routerLink="/iniciar-session">Iniciar Sesión <i class="fa fa-sign-in" aria-hidden="true"></i></button>
                             </li>
-                            <button type="button" class="btn btn-success">Login</button>
-
-                            <li id="menu-item-219175" 
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219175 "><a
-                                    href="#">Logout</a>
+                            <li id="menu-item-219171"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219171">
+                                
+                                <button type="button" style="background-color: rgb(227, 66, 98); border: crimson;" class="btn btn-primary btn-sm" routerLink="/iniciar-session">Cerrar Sesión <i  class="fa fa-sign-out" aria-hidden="true"></i></button>
                             </li>
-
                             
                         </ul>
+                        
                     </nav>
                     
-                        <button  class="btn btn-outline-success my-2 my-sm-0" routerLink="/login">Login</button>
-                        <button  class="btn btn-outline-success my-2 my-sm-0" routerLink="/logout" >Logout</button>
 
                 </div>
             </div>
 
         </header>
         <header>
-        <div class="container" id="profile-background"><img id="info-back-img"
+        <!--<div class="container" id="profile-background"><img id="info-back-img"
             src="https://argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/sliderimage1/1645588080/Banner4.png"
             alt="Imagen de fondo" width="full" height="full">
-        </div>
+        </div>-->
     </header>
-    <div class="container">
+    
+    <div class="container" >
+        <div class="box">
         <figure class="figure">
-            <img src="https://argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/sliderimage1/1645588080/Banner4.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-            <figcaption class="figure-caption text-right">Argentina Programa - Desarrollo Web Full Stack</figcaption>
+            <img src="data:image/png;base64,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"  class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption text-right"><p><a href="https://argentinaprograma.inti.gob.ar/">Argentina Programa - Desarrollo Web Full Stack</a></p></figcaption>
           </figure>
+        </div>
+
+        
     </div>
     
     
     </div>
+
+    
 
 </body>

@@ -1,176 +1,100 @@
-<!---->
-<header class="container-fluid">
-<div>
-<body
-    class="page-template-default page page-id-219162 theme-Divi woocommerce-js et_pb_button_helper_class et_fullwidth_nav et_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_footer_columns4 et_cover_background et_pb_gutter et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db chrome">
-    <div id="page-container" style="padding-top: 5px; margin-top: -1px;" class="et-animated-content">
+<div id="habilidad">
 
-        <div id="et-main-area">
-            <div id="main-content">
-                <article id="post-219162" class="post-219162 page type-page status-publish hentry">
-                    <div class="entry-content">
-                        <div class="et-l et-l--post">
-                            <div class="et_builder_inner_content et_pb_gutters3">
+  <div class="modal fade" id="idiomasForm" tabindex="-1" aria-labelledby="idiomasFormLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="idiomasFormLabel">Idiomas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="hassForm"(ngSubmit)="onSubmit()">
+            <input type="hidden" name="id" formControlName="id">
 
-                                <div class="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular">
-                                    <div class="et_pb_row et_pb_row_2">
-                                        <div
-                                            class="et_pb_column et_pb_column_1_3 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough">
-                                            <div
-                                                class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_dark">
-                                                <div class="et_pb_text_inner">
-                                                    <h2>Habilidades - Hard and Soft</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div
-                                            class="et_pb_column et_pb_column_1_3 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough">
-                                            <div
-                                                class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_dark">
-                                                <div class="et_pb_text_inner">
-                                                    <h4>Resumen</h4>
-                                                    <p>Resumen sobre habilidades aprendidas, sobre que puedo hacer etc.
-                                                        etc.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div
-                                            class="et_pb_column et_pb_column_1_3 et_pb_column_4  et_pb_css_mix_blend_mode_passthrough et-last-child">
-                                            <div
-                                                class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_left et_pb_bg_layout_dark">
-                                                <div class="et_pb_text_inner">
-                                                    <h4>Habilidades Blandas</h4>
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="et_pb_module et_pb_blurb et_pb_blurb_0  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_dark">
-                                                <div class="et_pb_blurb_content">
-                                                    <div class="et_pb_main_blurb_image"><span
-                                                            class="et_pb_image_wrap"><span
-                                                                class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon et-animated">=></span></span>
-                                                    </div>
-                                                    <div class="et_pb_blurb_container">
-                                                        <h4 class="et_pb_module_header"><span>Rápido aprendizaje</span>
-                                                        </h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div
-                                                class="et_pb_module et_pb_blurb et_pb_blurb_3  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_dark">
-                                                <div class="et_pb_blurb_content">
-                                                    <div class="et_pb_main_blurb_image"><span
-                                                            class="et_pb_image_wrap"><span
-                                                                class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon et-animated">=></span></span>
-                                                    </div>
-                                                    <div class="et_pb_blurb_container">
-                                                        <h4 class="et_pb_module_header"><span>Proin eget tortor
-                                                                risus</span></h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="et_pb_module et_pb_blurb et_pb_blurb_4  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_dark">
-                                                <div class="et_pb_blurb_content">
-                                                    <div class="et_pb_main_blurb_image"><span
-                                                            class="et_pb_image_wrap"><span
-                                                                class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon et-animated">=></span></span>
-                                                    </div>
-                                                    <div class="et_pb_blurb_container">
-                                                        <h4 class="et_pb_module_header">
-                                                            <span>Manejo de herramientas</span>
-                                                        </h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="et_pb_row et_pb_row_3">
-                                        <div
-                                            class="et_pb_column et_pb_column_1_3 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough">
-                                            <div
-                                                class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_left et_pb_bg_layout_dark">
-                                                <div class="et_pb_text_inner">
-                                                    <h2>Skills</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div
-                                            class="et_pb_column et_pb_column_2_3 et_pb_column_6  et_pb_css_mix_blend_mode_passthrough et-last-child">
-                                            <ul
-                                                class="et_pb_with_border et_pb_module et_pb_counters et_pb_counters_0 et-waypoint et_pb_bg_layout_light et-animated">
-                                                <li class="et_pb_counter et_pb_counter_0 et_hover_enabled">
-                                                    <span class="et_pb_counter_title">Marketing Strategy</span>
-                                                    <span class="et_pb_counter_container">
-                                                        <span class="et_pb_counter_amount" style="width: 80%;"
-                                                            data-width="80%"><span
-                                                                class="et_pb_counter_amount_number"><span
-                                                                    class="et_pb_counter_amount_number_inner"></span></span></span>
-                                                        <span class="et_pb_counter_amount overlay" style="width: 80%;"
-                                                            data-width="80%"><span
-                                                                class="et_pb_counter_amount_number"><span
-                                                                    class="et_pb_counter_amount_number_inner"></span></span></span>
-                                                    </span>
-                                                </li>
-                                                <li class="et_pb_counter et_pb_counter_1 et_hover_enabled">
-                                                    <span class="et_pb_counter_title">Business Development</span>
-                                                    <span class="et_pb_counter_container">
-                                                        <span class="et_pb_counter_amount" style="width: 95%;"
-                                                            data-width="95%"><span
-                                                                class="et_pb_counter_amount_number"><span
-                                                                    class="et_pb_counter_amount_number_inner"></span></span></span>
-                                                        <span class="et_pb_counter_amount overlay" style="width: 95%;"
-                                                            data-width="95%"><span
-                                                                class="et_pb_counter_amount_number"><span
-                                                                    class="et_pb_counter_amount_number_inner"></span></span></span>
-                                                    </span>
-                                                </li>
-                                                <li class="et_pb_counter et_pb_counter_2 et_hover_enabled">
-                                                    <span class="et_pb_counter_title">Desarrollo Web</span>
-                                                    <span class="et_pb_counter_container">
-                                                        <span class="et_pb_counter_amount" style="width: 85%;"
-                                                            data-width="85%"><span
-                                                                class="et_pb_counter_amount_number"><span
-                                                                    class="et_pb_counter_amount_number_inner"></span></span></span>
-                                                        <span class="et_pb_counter_amount overlay" style="width: 85%;"
-                                                            data-width="85%"><span
-                                                                class="et_pb_counter_amount_number"><span
-                                                                    class="et_pb_counter_amount_number_inner"></span></span></span>
-                                                    </span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!--<div class="et_pb_row et_pb_row_4">
-                                        <div
-                                            class="et_pb_column et_pb_column_4_4 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough et-last-child">
-                                            <div
-                                                class="et_pb_button_module_wrapper et_pb_button_0_wrapper et_pb_button_alignment_left et_pb_module ">
-                                                <a class="et_pb_button et_pb_button_0 et_pb_bg_layout_light" href=""
-                                                    data-icon="$">Hire Me</a>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                </div>
-
-                                <!--<div class="et_pb_section et_pb_section_6 et_section_regular">
-                                    <div class="et_pb_row et_pb_row_8 et_pb_equal_columns">
-
-                                        <div
-                                            class="et_pb_column et_pb_column_2_5 et_pb_column_13  et_pb_css_mix_blend_mode_passthrough et-last-child">
-
-                                        </div>
-                                    </div>
-                                </div>-->
-                            </div>
-                        </div>
-                    </div>
-                </article>
+            <div class="row mb-3">
+              <label for="school" class="col-sm-2 col-form-label">Habilidades</label>
+              <div class="col-sm-10">
+                <input type="text" name="habilidad" formControlName="habilidad" class="form-control" required>
+              </div>
             </div>
 
+            <div class="row mb-3">
+              <label for="title" class="col-sm-2 col-form-label">Nombre</label>
+              <div class="col-sm-10">
+                <input type="text" name="nombre" formControlName="nombre" class="form-control" required>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="title" class="col-sm-2 col-form-label">Porcentaje</label>
+                <div class="col-sm-10">
+                  <input type="text" name="porcentaje" formControlName="porcentaje" class="form-control" required>
+                </div>
+              </div>
+
+            <div class="text-center">
+              <button type="button" class="btn btn-secondary me-4" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+          </form>
         </div>
+      </div>
     </div>
-    
-</body>
-</div>
+  </div>
+
+  <div class="container">
+    <h1>HaSs</h1>
+    <div class="card-group">
+
+      <div class="card">
+
+        <div class="card-body" style="padding-top: 8%; padding-bottom: 5%; padding-left: 10%;">
+          <h5 class="card-title">
+            <p class="card-text">Manejo de Herramientas tech</p>
+          </h5>
+        </div>
+
+      </div>
+      <div class="card">
+
+        <div class="card-body" style="padding-top: 5%; padding-bottom: 5%;">
+          <h5 class="card-title">Estimado</h5>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
+              aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+
+        <div class="card-body" style="padding-top: 5%; padding-left: 5%; padding-bottom: 5%;">
+
+          <div class="card text-center"
+            style="width: 12rem; height:5rem  ; border-color: aliceblue; padding: 0%; background-color: rgb(255, 255, 255); border-width: 0.1rem;">
+            <div class="card-body">
+
+              <button class="btn btn-secondary btn-sm"> Editar sección <button class="card-title"><i
+                    class="fa fa-pencil-square-o" aria-hidden="true"></i></button></button>
+
+            </div>
+
+          </div>
+
+        </div>
+        <div class="card-body" style="padding-top: 5%; padding-left: 5%; padding-bottom: 5%;">
+
+          <div class="card text-center"
+            style="width: 12rem; height:5rem  ; border-color: aliceblue; padding: 0%; background-color: rgb(255, 255, 255); border-width: 0.1rem;">
+            <div class="card-body">
+
+              <button class="btn btn-secondary btn-sm" style="background-color: rgb(247, 121, 121);"> Eliminar
+                sección<button class="card-title" style="border-radius: 0%;"><i class="fa fa-trash-o"
+                    aria-hidden="true"></i></button></button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>

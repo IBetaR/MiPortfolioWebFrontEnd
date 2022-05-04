@@ -8,7 +8,7 @@
     
       },
 
-      "acerca-de": 
+      "acercade": 
       {
         "nombrecompleto": "Ilich Betancourt Rangel",
         "titulo": "Acerca de mi",
@@ -125,7 +125,7 @@
 
 
 
-    "hass": [
+    "habilidad": [
         {
           "nombre": "Resolución de problemas",
           "porcentaje": 75
@@ -140,7 +140,7 @@
         }
         
             ],
-      "idiomas": [
+      "idioma": [
           {
             "idioma": "Inglés",
             "nivel": "Intermedio",
@@ -151,7 +151,7 @@
           
                 ],  
                           
-      "pyl": [
+      "proyecto": [
           {
             "nombre": "Desarrollo Portfolio Web personal",
             "descripcion": "Creación de Portfolio personal editable - Back end y Front end",
@@ -175,7 +175,7 @@
               ],
 
 
-      "referencias": [
+      "referencia": [
 
         {
           "nombrecompleto": "Ricardo Méndez - WaflesSur® Patagonia",
