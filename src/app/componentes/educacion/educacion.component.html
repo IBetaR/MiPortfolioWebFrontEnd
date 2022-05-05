@@ -2,76 +2,94 @@
   <!-- Modal -->
   <div class="modal fade" id="ModalEdu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <h5 style="padding: 2%;">Educación</h5>
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Centro</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Título Obtenido</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Descripción breve</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Logo del centro educativo (URL)</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Puntaje/Certificación</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Fecha de inicio</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Fecha de finalización</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Status</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">URL del centro educativo</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
+      <div class="modal-dialog">
+          <div class="modal-content">
+            <h5 style="padding: 2%;">Educación</h5>
 
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Guardar</button>
+
+            <div class="modal-body">
+              <form [formGroup]="educacionForm" (ngSubmit)="onSubmit()"><!---->
+                <input type="hidden" name="id" formControlName="id">
+
+                    <div class="modal-header">
+                      <label for="centro"><h6>Nombre del Centro Educativo</h6></label>
+                        
+                        <input type="text" name="centro" formControlName="centro" 
+                        class="form-control" required style="width: 70%">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+
+
+                    <div class="modal-header">
+                      <label for="titulo"><h6>Título Obtenido</h6></label>
+                        
+                        <input type="text" name="titulo" formControlName="titulo"
+                         class="form-control" required style="width: 70%">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+
+
+                    <div class="modal-header">
+                        <label for="descrip"><h6>Descripción del estudio</h6></label>
+                        
+                        <input type="text" name="descrip" formControlName="descrip"
+                         class="form-control" required style="width: 70%">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-header">
+                        <label for="img"><h6>Logo de Institución</h6></label>
+                          
+                        <input type="text" name="img" formControlName="img" 
+                        class="form-control" required style="width: 70%">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-header">
+                        <label for="puntaje"><h6>Puntaje/Certicación</h6></label>
+                          
+                        <input type="text" name="puntaje" formControlName="puntaje" 
+                        class="form-control" required style="width: 70%">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-header">
+                        <label for="inicio"><h6>Fecha de inicio</h6></label>
+                          
+                        <input type="date" name="inicio" formControlName="inicio" 
+                        class="form-control" required style="width: 70%">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-header">
+                        <label for="fin"><h6>Fecha de finalización</h6></label>
+                          
+                        <input type="date" name="fin" formControlName="fin" 
+                        class="form-control" required style="width: 70%">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-header">
+                      <label for="status"><h6>Status</h6></label>
+                          
+                        <input type="text" style="width: 70%" name="status" formControlName="status"
+                         class="form-control" required>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-header">
+                      <label for="url"><h6>Ingrese imagen de perfil (URL)</h6></label>
+                          
+                        <input type="text" name="url" formControlName="url" 
+                        class="form-control" required style="width: 70%">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+          </form>
         </div>
       </div>
     </div>
@@ -80,75 +98,88 @@
   <div class="mat-card">
     <div class="card" style="margin-top: 1%; margin-bottom: 1%;">
       <h5 style="margin-bottom: 2%; background-color: rgba(100, 177, 245, 0.463);"
-       class="card-header">Educación</h5>
-
-
+         class="card-header">Educación</h5>
+  
       <div class="container-fluid">
         <ul class="items-list" id="eduList">
           <li *ngFor="let educacion of educacionList">
-
+  
             <div class="row row-cols-1 row-cols-md-3 g-4" style="border-radius: 10%;  ">
               
-                      <div class="col">
-                        <div class="card h-100" style="border-radius: 100%; border-color: white; margin-top: 0%; padding:10%">
-                          <img [src]="educacion.img" class="card-img-top" alt="Logo Centro educativo">
-                        </div>
+               <div class="col">
+                 <div class="card h-100" style="border-radius: 100%; border-color: white; margin-top: 0%; padding:10%">
+                   <img [src]="educacion.img" class="card-img-top" alt="Logo Centro educativo">
+                 </div>
+               </div>
+  
+                <div class="col">
+                  <div class="card h-100" style="margin-inline-start: -10%; border-color: white;">
+                      <div class="card-body" style="padding: 10%;">
+                        <i class="fa-solid fa-briefcase" style="margin-left: 50%;"></i>
+                        <h5 routerLink="linkcentroEdu" class="card-title"><a href="linkcentroEdu"></a>{{educacion.centro}}</h5>
                       </div>
-
-                      <div class="col">
-                        <div class="card h-100" style="margin-inline-start: -10%; border-color: white;">
-                          <div class="card-body" style="padding: 10%;">
-                            <i class="fa-solid fa-briefcase" style="margin-left: 50%;"></i>
-                            <h5 routerLink="linkcentroEdu" class="card-title"><a href="linkcentroEdu"></a>{{educacion.centro}}</h5>
-                          </div>
-                        
-                          <div class="card-body" style="padding: 10%; margin-top: -15%;">
-                            <h6 class="card-title">{{educacion.titulo}}</h6>
+                 
+                      <div class="card-body" style="padding: 10%; margin-top: -15%;">
+                          <h6 class="card-title">{{educacion.titulo}}</h6>
+                
+                          <p class="texto-justificado">{{educacion.descrip}}</p>
         
-                            <p class="texto-justificado">{{educacion.descrip}}</p>
-
-                                <div class="card-footer" style="margin-left: 5%;">
-                                  <small style="margin-left: 30%;" class="text-muted">{{educacion.inicio}}</small><span> - </span> <small
-                                    class="text-muted">{{educacion.fin}}</small>
+                            <div class="card-footer" style="margin: auto; width: fit-content;">
+                                <small style="margin: auto;" class="text-muted"><label for="inicio"></label>
+                                  {{educacion.inicio}}
+                                </small>
+                                <span>
+                                    - 
+                                </span>
+                                <small class="text-muted"><label for="fin"></label>
+                                  {{educacion.fin}}
+                                </small>
+                            </div>
+                        </div>
+                  </div>
+                     </div>
+                        <div class="col">
+                          <div class="card h-100" style="border-color: white;">
+                            <div class="card-body" style="padding: 10%;">
+  
+                            </div>
+                            <div class="card-body" style="padding: 10%; margin: auto;">
+                              <h6 class="text-muted">Status:</h6>
+                              <div class="card-footer" style="margin: auto;">
+                                <small style="margin: auto;" class="text-muted">{{educacion.status}}</small>
+                              </div>
+  
+                              <div class="dropdown" style="margin-top: 10%;">
+  
+                                <div *ngIf="isUserLogged" class="btn-edit">
+                                  <button class="btn btn-secondary dropdown-toggle" type="button" 
+                                id="dropdownMenu2" data-bs-toggle="dropdown" (click)="onNuevaEducacion()" aria-expanded="false">
+                                  Acciones del campo
+                                </button>
                                 </div>
-                          </div>
 
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="card h-100" style="border-color: white;">
-                          <div class="card-body" style="padding: 10%;">
-
-                          </div>
-                          <div class="card-body" style="padding: 10%; margin-top: -15%;">
-                            <h6 class="text-muted">Status:</h6>
-                            <div class="card-footer" style="margin-left: 5%;">
-                              <small style="margin-left: 10%;" class="text-muted">{{educacion.status}}</small>
-                            </div>
-                            <div class="dropdown" style="margin-top: 10%;">
-                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                                Acciones del campo
-                              </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                  <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
-                                    data-bs-target="#ModalEdu">Crear</button></li>
-                                  <li><button class="dropdown-item" type="button"data-bs-toggle="modal"
-                                    data-bs-target="#ModalEdu">Modificar</button></li>
-                                  <li><button class="dropdown-item" type="button">Eliminar</button></li>
-                                </ul>
+                                <button class="btn btn-secondary dropdown-toggle" type="button" 
+                                id="dropdownMenu2" data-bs-toggle="dropdown" (click)="onNuevaEducacion()" aria-expanded="false">
+                                  Acciones del campo
+                                </button>
+  
+        
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+                                      data-bs-target="#ModalEdu">Crear</button></li>
+                                    <li><button class="dropdown-item" type="button"data-bs-toggle="modal"
+                                      data-bs-target="#ModalEdu">Modificar</button></li>
+                                    <li><button class="dropdown-item" type="button">Eliminar</button></li>
+                                  </ul>
+                              </div>
                             </div>
                           </div>
-
-                          
-                        
-
-                          
                         </div>
-                      </div>
             </div>
           </li>
         </ul>
       </div>
     </div>
   </div>
+  
 </div>

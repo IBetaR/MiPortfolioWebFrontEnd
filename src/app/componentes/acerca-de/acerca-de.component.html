@@ -1,38 +1,51 @@
-<!--COmponente listo/cargar en proyecto definitivo-->
+<!--COmponente listo/cargar en proyecto definitivo
+
+https://ibrmiportfolioweb.web.app/
+
+-->
 <div id="acercade">
-  <div class="modal fade" id="ModaAcd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="ModalAcd" tabindex="-1" aria-labelledby="exampleModalLabel"
+   aria-hidden="true">
   
     <div class="modal-dialog">
       <div class="modal-content">
         <h5 style="padding: 2%;">Datos personales del perfil</h5>
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Nombre(s) y apellido(s)</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
+        
         <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Título - Perfil Profesional</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ingrese un resumen de su Curriculum Vitae</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ingrese imagen de perfil (URL)</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
+          <form [formGroup]="acercaDeForm" (ngSubmit)="onSubmit()">
+            <input type="hidden" name="id" formControlName="id">
+
+
+                  <div class="modal-header">
+                    <label for="nombrecompleto"><h6>Nombre(s) y Apellido(s)</h6></label>
+                    
+                    <input type="text" name="nombrecompleto" formControlName="nombrecompleto" class="form-control" required>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+        
+                  <div class="modal-header">
+                    <label for="titulo"><h6>Título - Perfil Profesional</h6></label>
+                    
+                    <input type="text" name="titulo" formControlName="titulo" class="form-control" required>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <div class="modal-header">
+                    <label for="resumencv"><h6>Ingrese un resumen de su Curriculum Vitae</h6></label>
+                    
+                    <input type="text" name="resumencv" formControlName="resumencv" class="form-control" required>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <div class="modal-header">
+                    <label for="imagenperfil"><h6>Ingrese imagen de perfil (URL)</h6></label>
+                    
+                    <input type="text" name="imagenperfil" formControlName="imagenperfil" class="form-control" required>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+              </form>
+          </div>
       
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -57,11 +70,14 @@
           </div>
   
           <div class="card-body">
+            
             <blockquote class="blockquote mb-0">
-              <h1 id="info-name">Ilich Betancourt Rangel</h1>
+              <h1 id="info-name">Ilich Betancourt Rangel</h1> <i class="fa fa-code" style="color: rgb(0, 0, 0); margin-left: 0%; background-color: rgb(255, 255, 255);
+              " aria-hidden="true"></i><i class="fa-solid fa-code"></i><i class="fa-regular fa-brackets-curly" style="background-color: black;"></i>
               <p>Desarrollador Web Full Stack Jr.</p>
               <footer class="blockquote-footer">Desarrollador Web Full Stack Jr. <cite title="Source Title">#Argentina
                   Programa</cite></footer>
+                 
             </blockquote>
   
             <div id="info-contact">
@@ -70,14 +86,24 @@
             </div>
 
             <div class="dropdown" style="margin-top: 1%;">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+
+              <div *ngIf="isUserLogged" class="btn-edit">
+                <button class="btn btn-secondary dropdown-toggle" type="button" 
+              id="dropdownMenu2" data-bs-toggle="dropdown" (click)="onNuevoAcercaDe()" aria-expanded="false">
                 Acciones del campo
               </button>
+              </div>
+
+              <button class="btn btn-secondary dropdown-toggle" type="button" 
+              id="dropdownMenu2" data-bs-toggle="dropdown" (click)="onNuevoAcercaDe()" aria-expanded="false">
+                Acciones del campo
+              </button>
+
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                   <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
-                    data-bs-target="#ModaAcd">Crear</button></li>
+                    data-bs-target="#ModalAcd">Crear</button></li>
                   <li><button class="dropdown-item" type="button"data-bs-toggle="modal"
-                    data-bs-target="#ModaAcd">Modificar</button></li>
+                    data-bs-target="#ModalAcd">Modificar</button></li>
                   <li><button class="dropdown-item" type="button">Eliminar</button></li>
                 </ul>
             </div>
@@ -99,4 +125,4 @@
   </div>
   </div>
   
-  </div>
+</div>

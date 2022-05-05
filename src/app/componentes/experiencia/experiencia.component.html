@@ -6,63 +6,80 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <h5 style="padding: 2%;">Experiencia Laboral</h5>
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Cargo desempeñado</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
+          
+          
           <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Empresa</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Descripción de principales funciones</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Logo de empresa (URL)</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modalidad</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Fecha de inicio</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Fecha de finalización</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
+            <form [formGroup]="experienciaForm" (ngSubmit)="onSubmit()"><!---->
+              <input type="hidden" name="id" formControlName="id">
+              
+              
+              <div class="modal-header">
+                <label for="cargo"><h6>Cargo desempeñado</h6></label>
+                  
+                  <input type="text" name="cargo" formControlName="cargo" 
+                  class="form-control" required style="width: 70%">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="modal-header">
+                <label for="empresa"><h6>Empresa - Institución</h6></label>
+                  
+                  <input type="text" name="empresa" formControlName="empresa" 
+                  class="form-control" required style="width: 70%">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="modal-header">
+                <label for="descrip"><h6>Descripción de principales funciones</h6></label>
+                  
+                  <input type="text" name="descrip" formControlName="descrip" 
+                  class="form-control" required style="width: 70%">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="modal-header">
+                <label for="img"><h6>Logo de la Empresa/Institución</h6></label>
+                  
+                  <input type="text" name="img" formControlName="img" 
+                  class="form-control" required style="width: 70%">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="modal-header">
+                <label for="modalidad"><h6>Modalidad de Trabajo (Ej: Full time)</h6></label>
+                  
+                  <input type="text" name="modalidad" formControlName="modalidad" 
+                  class="form-control" required style="width: 70%">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="modal-header">
+                <label for="inicio"><h6>Fecha de inicio</h6></label>
+                  
+                <input type="date" name="inicio" formControlName="inicio" 
+                class="form-control" required style="width: 70%">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-header">
+                <label for="fin"><h6>Fecha de finalización</h6></label>
+                  
+                <input type="date" name="fin" formControlName="fin" 
+                class="form-control" required style="width: 70%">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+   
   
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
             <button type="button" class="btn btn-primary">Guardar</button>
           </div>
-        </div>
-      </div>
+      </form>
     </div>
+  </div>
+</div>
+</div>
+
   
     <div class="mat-card">
       <div class="card" style="margin-top: 1%; margin-bottom: 1%;">
@@ -71,7 +88,7 @@
   
   
         <div class="container-fluid" style="background-color: rgb(255, 255, 255);">
-          <ul class="items-list" id="eduList">
+          <ul class="items-list" id="experienciaList">
             <li *ngFor="let experiencia of experienciaList">
   
               <div class="row row-cols-1 row-cols-md-3 g-4" style="border-radius: 10%;  ">
@@ -93,10 +110,17 @@
                               <h6 class="card-title">{{experiencia.cargo}}</h6>
                               <p class="texto-justificado">{{experiencia.descrip}}</p>
   
-                                  <div class="card-footer" style="margin-left: 5%;">
-                                    <small style="margin-left: 30%;" class="text-muted">{{experiencia.inicio}}</small><span> - </span> <small
-                                      class="text-muted">{{experiencia.fin}}</small>
-                                  </div>
+                              <div class="card-footer" style="margin: auto; width: fit-content;">
+                                <small style="margin: auto;" class="text-muted"><label for="inicio"></label>
+                                  {{experiencia.inicio}}
+                                </small>
+                                <span>
+                                    - 
+                                </span>
+                                <small class="text-muted"><label for="fin"></label>
+                                  {{experiencia.fin}}
+                                </small>
+                            </div>
 
                                   
                                   
@@ -114,7 +138,7 @@
                               <div class="card-footer" style="margin-left: 5%;">
                                 <small style="margin-left: 10%;" class="text-muted">{{experiencia.modalidad}}</small>
                               </div>
-                              <div class="dropdown" style="margin-top: 10%;">
+                              <div class="dropdown" style="margin: auto; width: fit-content; margin-top: 4%;">
                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                                   Acciones del campo
                                 </button>
