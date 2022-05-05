@@ -5,3 +5,11 @@
     padding: 1px;
 
 }
+
+ul {
+    list-style: none;
+}
+
+.texto-justificado{
+    text-align: justify;
+    }

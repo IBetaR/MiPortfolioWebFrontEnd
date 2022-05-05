@@ -4,3 +4,18 @@
     background-color: red;
 
 }
+
+ul {
+    list-style: none;
+}
+
+.texto-justificado{
+    text-align: justify;
+    }
+    .container {
+        border-style: solid;
+        border-radius: 10px;
+        border-color: rgb(132, 130, 130);
+        padding: 5px;
+    
+    }

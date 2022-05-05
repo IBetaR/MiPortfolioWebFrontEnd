@@ -1,78 +1,56 @@
-
-<div id="encabezado">
-<body
-    class="page-template-default page page-id-219162 theme-Divi woocommerce-js et_pb_button_helper_class et_fullwidth_nav et_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_footer_columns4 et_cover_background et_pb_gutter et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db chrome">
-    <div id="page-container" style="padding-top: 10px; margin-top: -1px;" class="et-animated-content">
-        <header id="main-header" data-height-onload="80" data-height-loaded="true" data-fixed-height-onload="0"
-            style="top: 0px;" class="et-fixed-header">
-            <div class="container clearfix et_menu_container">
-                <div class="title_container">
-                    <h1>
-                        <a title="Divi Builder Layout Pack"><i class="fa fa-code" style="color: rgb(0, 226, 192);" aria-hidden="true"></i>  Portfolio Web</a>
-                        <a href="#" title="Divi Builder Layout Pack">{{miPortfolio.titulo}}</a>
-                    </h1>
-
-                </div>
-                <div id="et-top-navigation" data-height="66" data-fixed-height="40">
-                    <nav id="top-menu-nav">
-                        <ul id="top-menu" class="nav">
-                            <li id="menu-item-219161"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219161">
-                                
-                                <a href="https://github.com/IBetaR" class="icon">
-                                    <span><i class="fa fa-github" aria-hidden="true"></i></span>
-                                </a>
-                            </li>
-                            <li id="menu-item-219163"
-                                class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-219162 current_page_item menu-item-219163">
-                                <a href="Instagram" aria-current="page"><i class="fa fa-user-o" aria-hidden="true"></i></a>
-                            </li>
-                            <li id="menu-item-219165"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219165"><a
-                                    href="#">Web profesional</a>
-                            </li>
-                            
-                            <li id="menu-item-219171"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219171">
-                                
-                                <button type="button" style="background-color: rgb(31, 222, 178); border: rgb(249, 247, 247);"  class="btn btn-primary btn-sm" routerLink="/iniciar-session">Iniciar Sesión <i class="fa fa-sign-in" aria-hidden="true"></i></button>
-                            </li>
-                            <li id="menu-item-219171"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219171">
-                                
-                                <button type="button" style="background-color: rgb(227, 66, 98); border: crimson;" class="btn btn-primary btn-sm" routerLink="/iniciar-session">Cerrar Sesión <i  class="fa fa-sign-out" aria-hidden="true"></i></button>
-                            </li>
-                            
-                        </ul>
-                        
-                    </nav>
-                    
-
-                </div>
-            </div>
-
-        </header>
-        <header>
-        <!--<div class="container" id="profile-background"><img id="info-back-img"
-            src="https://argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/sliderimage1/1645588080/Banner4.png"
-            alt="Imagen de fondo" width="full" height="full">
-        </div>-->
-    </header>
-    
-    <div class="container" >
-        <div class="box">
-        <figure class="figure">
-            <img src="data:image/png;base64,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"  class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-            <figcaption class="figure-caption text-right"><p><a href="https://argentinaprograma.inti.gob.ar/">Argentina Programa - Desarrollo Web Full Stack</a></p></figcaption>
-          </figure>
-        </div>
-
+<header id="encabezado">
+    <div id="encabezado"> <!--Encabezado Listo -->
+  
+        <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+          <li *ngFor="let encabezado of encabezado"></li>
+      
+          <i class="fa fa-code" style="color: rgb(255, 255, 255); margin-left: 2%; background-color: rgb(100, 177, 245);
+          " aria-hidden="true"></i><a class="navbar-brand" style="margin-left: 2%;"
+           href="https://www.argentina.gob.ar/produccion/argentina-programa/segunda-etapa"
+           >{{encabezado.titulo}}</a> <i class="fa-regular fa-brackets-curly"></i>
         
-    </div>
-    
-    
-    </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 45%;">
+            <ul class="navbar-nav mr-auto">
+          
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light">
+                  <i class="grey-text fab fa-instagram fa-2x"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light" href="{{encabezado.linkedin}}">
+                  <i class="grey-text fab fa-linkedin fa-2x"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light" href="{{encabezado.github}}">
+                  <i class="grey-text fab fa-github-square fa-2x"></i>
+                  
+                </a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link waves-effect waves-light" routerLink="/iniciar-session">
+                <form class="form-inline my-2 my-lg-0">
+                  <button class="btn btn-primary btn-sm" style="background-color: rgb(31, 222, 178); margin-right: 0%; border: rgb(249, 247, 247);" routerLink="/iniciar-session">Iniciar Sesión</button>
+            
+                </form>
+        
+                <!--<form class="form-inline my-2 my-lg-0">
+                  <button class="btn btn-primary btn-sm" style="background-color: rgba(249, 42, 42, 0.708); border: rgb(249, 247, 247);"routerLink="/logout">Cerrar Sesión</button>
+            
+                </form>-->
+              </a>
+              </li>
+            </ul>
+            
+        
+        
+          </div>
+        </nav>
+        
+      
+       
+         
+      </div>
 
-    
-
-</body>
+</header>

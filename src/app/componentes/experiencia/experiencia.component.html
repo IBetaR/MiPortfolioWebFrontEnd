@@ -1,82 +1,142 @@
-
+<!--Componente listo/cargar en proyecto definitivo-->
 <div id="experiencia">
-<header class="container-fluid">
-    <div >
-        <body class="page-template-default page page-id-219166 theme-Divi woocommerce-js et_pb_button_helper_class et_fullwidth_nav et_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_footer_columns4 et_cover_background et_pb_gutter osx et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db chrome">
-            <div id="page-container" style="padding-top: 5px; margin-top: -1px;" class="et-animated-content">
-                <div id="et-main-area">
-                    <div id="main-content">
-                        <article id="post-219166" class="post-219166 page type-page status-publish hentry">
-                            <div class="entry-content">
-                                <div class="et-l et-l--post">
-                                    <div class="et_builder_inner_content et_pb_gutters3">
-                                        <div class="et_pb_section et_pb_section_0 et_section_regular">
-                                            <div class="et_pb_row et_pb_row_1">
-                                                <div class="et_pb_column et_pb_column_1_3 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough">
-                                                    <div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_dark">
-                                                        <div class="et_pb_text_inner">
-                                                            <h2>Experiencia Profesional</h2>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="et_pb_column et_pb_column_1_3 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough">
-                                                    <div class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_dark">
-                                                        <div class="et_pb_text_inner">Resumen de Experiencia Laboral
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="et_pb_section et_pb_section_1 et_section_regular">
-                                            <div class="et_pb_with_border et_pb_row et_pb_row_3">
-                                                <div class="et_pb_column et_pb_column_4_4 et_pb_column_6  et_pb_css_mix_blend_mode_passthrough et-last-child">
-                                                </div>
-                                            </div>
-                                            <ul class="items-list">
-                                                <li *ngFor="let experiencia of experienciaList">
-                                                    <div class="et_pb_row et_pb_row_4 et_pb_row_4col">
-
-                                                        <div class="et_pb_column et_pb_column_1_4 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough et_pb_column_empty">
-                                                            <div class="et_pb_module et_pb_image et_pb_image_0">
-                                                                <span class="et_pb_image_wrap "><img width="180"
-                                                                        height="180" [src]="experiencia.img"
-                                                                        alt="imagen de perfil" title=""
-                                                                        class="wp-image-47819">
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                        <div  class="et_pb_column et_pb_column_1_4 et_pb_column_8  et_pb_css_mix_blend_mode_passthrough">
-                                                            <div class="et_pb_module et_pb_text et_pb_text_5  et_pb_text_align_left et_pb_bg_layout_light">
-                                                                <div class="et_pb_text_inner">
-                                                                    <p><i class="fa fa-briefcase" aria-hidden="true"></i></p>
-                                                                    <h3>{{experiencia.empresa}}</h3>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="et_pb_column et_pb_column_1_4 et_pb_column_9  et_pb_css_mix_blend_mode_passthrough">
-                                                            <div class="et_pb_module et_pb_text et_pb_text_6  et_pb_text_align_left et_pb_bg_layout_light">
-                                                                <div class="et_pb_text_inner">
-                                                                    <h4>{{experiencia.cargo}}</h4>
-                                                                    <p>{{experiencia.descrip}}</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="et_pb_column et_pb_column_1_4 et_pb_column_10  et_pb_css_mix_blend_mode_passthrough et-last-child">
-                                                            <div class="et_pb_module et_pb_text et_pb_text_7  et_pb_text_align_left et_pb_bg_layout_light">
-                                                                <div class="et_pb_text_inner">
-                                                                    {{experiencia.inicio}}-{{experiencia.fin}}</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </body>
+    <!-- Modal -->
+    <div class="modal fade" id="ModalExp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <h5 style="padding: 2%;">Experiencia Laboral</h5>
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cargo desempeñado</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Empresa</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Descripción de principales funciones</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Logo de empresa (URL)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modalidad</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Fecha de inicio</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Fecha de finalización</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+  
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Guardar</button>
+          </div>
+        </div>
+      </div>
     </div>
+  
+    <div class="mat-card">
+      <div class="card" style="margin-top: 1%; margin-bottom: 1%;">
+        <h5 style="margin-bottom: 2%; background-color: rgba(100, 177, 245, 0.463);"
+         class="card-header">Experiencia Laboral</h5>
+  
+  
+        <div class="container-fluid" style="background-color: rgb(255, 255, 255);">
+          <ul class="items-list" id="eduList">
+            <li *ngFor="let experiencia of experienciaList">
+  
+              <div class="row row-cols-1 row-cols-md-3 g-4" style="border-radius: 10%;  ">
+                
+                        <div class="col">
+                          <div class="card h-100" style="border-radius: 100%; border-color: white; margin-top: 0%;margin-left: -18%; padding:20%; ">
+                            <img [src]="experiencia.img" class="card-img-top" alt="Logo Empresa">
+                          </div>
+                        </div>
+  
+                        <div class="col">
+                          <div class="card h-100" style="margin-inline-start: -10%; border-color: white;">
+                            <div class="card-body" style="padding: 10%;">
+                              <i class="fa-solid fa-briefcase" style="margin-left: 50%;"></i>
+                              <h5 class="card-title">{{experiencia.empresa}}</h5>
+                            </div>
+                          
+                            <div class="card-body" style="padding: 10%; margin-top: -15%;">
+                              <h6 class="card-title">{{experiencia.cargo}}</h6>
+                              <p class="texto-justificado">{{experiencia.descrip}}</p>
+  
+                                  <div class="card-footer" style="margin-left: 5%;">
+                                    <small style="margin-left: 30%;" class="text-muted">{{experiencia.inicio}}</small><span> - </span> <small
+                                      class="text-muted">{{experiencia.fin}}</small>
+                                  </div>
+
+                                  
+                                  
+                            </div>
+  
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100" style="border-color: white;">
+                            <div class="card-body" style="padding: 10%;">
+  
+                            </div>
+                            <div class="card-body" style="padding: 10%;margin-top: -15%;">
+                              <h6 class="text-muted">Modalidad:</h6>
+                              <div class="card-footer" style="margin-left: 5%;">
+                                <small style="margin-left: 10%;" class="text-muted">{{experiencia.modalidad}}</small>
+                              </div>
+                              <div class="dropdown" style="margin-top: 10%;">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Acciones del campo
+                                </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+                                      data-bs-target="#ModalExp">Crear</button></li>
+                                    <li><button class="dropdown-item" type="button"data-bs-toggle="modal"
+                                      data-bs-target="#ModalExp">Modificar</button></li>
+                                    <li><button class="dropdown-item" type="button">Eliminar</button></li>
+                                  </ul>
+                              </div>
+                            </div>
+                            
+                          
+  
+                            
+                          </div>
+                        </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>

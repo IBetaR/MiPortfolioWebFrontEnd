@@ -1,168 +1,154 @@
 <div id="educacion">
-<!--<header class="container-fluid">
-    <div>
-        <body
-            class="page-template-default page page-id-219166 theme-Divi woocommerce-js et_pb_button_helper_class et_fullwidth_nav et_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_footer_columns4 et_cover_background et_pb_gutter osx et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db chrome">
-            <div id="page-container" style="padding-top: 1px; margin-top: -1px;" class="et-animated-content">
-                <div id="et-main-area">
-                    <div id="main-content">
-                        <article id="post-219166" class="post-219166 page type-page status-publish hentry">
-                            <div class="entry-content">
-                                <div class="et-l et-l--post">
-                                    <div class="et_builder_inner_content et_pb_gutters3">
-                                        <div class="et_pb_section et_pb_section_0 et_section_regular">
-                                            <!--este Div es un espacio en blanco
-                                        </div>
-                                        <div class="et_pb_row et_pb_row_1">
-                                            <div  class="et_pb_column et_pb_column_1_3 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough">
-                                                <div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_dark">
-                                                    <div class="et_pb_text_inner">
-                                                        <h2>Educación</h2>
-                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="et_pb_column et_pb_column_1_3 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough">
-                                                <div  class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_dark">
-                                                     <div class="et_pb_text_inner">Resumen de estudios realizados</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <article>
-                                            <div class="et_pb_section et_pb_section_3 et_section_regular">
-                                                <div class="et_pb_with_border et_pb_row et_pb_row_10">
-                                                    <div
-                                                        class="et_pb_column et_pb_column_4_4 et_pb_column_30  et_pb_css_mix_blend_mode_passthrough et-last-child">
-                                                        <div
-                                                            class="et_pb_module et_pb_text et_pb_text_19  et_pb_text_align_left et_pb_bg_layout_light">
-                                                            <div class="et_pb_text_inner">
-                                                                <h2>Educación &amp; Awards</h2>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>-->
+  <!-- Modal -->
+  <div class="modal fade" id="ModalEdu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
-                                                <div class="modal fade" id="educacionForm" tabindex="-1" aria-labelledby="educacionFormLabel" aria-hidden="true">
-                                                    <div class="modal-dialog">
-                                                      <div class="modal-content">
-                                                        <div class="modal-header">
-                                                          <h5 class="modal-title" id="educacionFormLabel">Educacion</h5>
-                                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                          <form [formGroup]="educacionForm" (ngSubmit)="onSubmit()">
-                                                            <input type="hidden" name="id" formControlName="id">
-                                                
-                                                            <div class="row mb-3">
-                                                              <label for="school" class="col-sm-2 col-form-label">School</label>
-                                                              <div class="col-sm-10">
-                                                                <input type="text" name="school" formControlName="school" class="form-control" required>
-                                                              </div>
-                                                            </div>
-                                                
-                                                            <div class="row mb-3">
-                                                              <label for="title" class="col-sm-2 col-form-label">Title</label>
-                                                              <div class="col-sm-10">
-                                                                <input type="text" name="title" formControlName="title" class="form-control" required>
-                                                              </div>
-                                                            </div>
-                                                
-                                                            <div class="row mb-3">
-                                                              <label for="score" class="col-sm-2 col-form-label">Score</label>
-                                                              <div class="col-sm-10">
-                                                                <input type="number" name="score" formControlName="score" class="form-control" required>
-                                                              </div>
-                                                            </div>
-                                                
-                                                            <div class="row mb-3">
-                                                              <label for="score" class="col-sm-2 col-form-label">Image</label>
-                                                              <div class="col-sm-10">
-                                                                <input type="text" name="img" formControlName="img" class="form-control" required>
-                                                              </div>
-                                                            </div>
-                                                
-                                                            <div class="text-center">
-                                                              <button type="button" class="btn btn-secondary me-4" data-bs-dismiss="modal">Close</button>
-                                                              <button type="submit" class="btn btn-primary">Save changes</button>
-                                                            </div>
-                                                          </form>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-                                                  </div>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <h5 style="padding: 2%;">Educación</h5>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Centro</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Título Obtenido</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Descripción breve</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Logo del centro educativo (URL)</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Puntaje/Certificación</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Fecha de inicio</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Fecha de finalización</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Status</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">URL del centro educativo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
 
-                                                <div class="card-titles">
-                                                    <h2>Educación</h2>
-                                                    <div *ngIf="isUserLogged" class="btn-edit">
-                                                      <button class="btn btn-right" data-bs-toggle="modal" data-bs-target="#educacionForm" (click)="onNuevaEducacion()"><i class="fa fa-plus"></i></button>
-                                                    </div>
-                                                  </div>
-                                                  <div>
-                                                
-                                                <ul class="items-list" id="eduList" >
-                                                    <li *ngFor="let educacion of educacionList; let i = index">
-                                                        <div class="et_pb_row et_pb_row_11 et_pb_row_4col">
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-                                                            <div
-                                                                class="et_pb_column et_pb_column_1_4 et_pb_column_31  et_pb_css_mix_blend_mode_passthrough et_pb_column_empty">
-                                                                <div class="et_pb_module et_pb_image et_pb_image_0">
-                                                                    <span  class="et_pb_image_wrap "><img width="180"
-                                                                            height="180" [src]="educacion.img"
-                                                                            alt="imagen de centro" title="{{educacion.centro}}"
-                                                                            class="wp-image-47819">
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                            <div
-                                                                class="et_pb_column et_pb_column_1_4 et_pb_column_32  et_pb_css_mix_blend_mode_passthrough">
-                                                                <div
-                                                                    class="et_pb_module et_pb_text et_pb_text_20  et_pb_text_align_left et_pb_bg_layout_light">
-                                                                    <div class="et_pb_text_inner">
-                                                                        <p><i class="fa fa-graduation-cap" aria-hidden="true"></i></p>
-                                                                        <h3>{{educacion.centro}}</h3>
-                                                                        <span>
-                                                                            <p>{{educacion.inicio}} - {{educacion.fin}}</p>
-                                                                            <p>{{educacion.status}}</p>
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div
-                                                                class="et_pb_column et_pb_column_1_4 et_pb_column_33  et_pb_css_mix_blend_mode_passthrough">
-                                                                <div
-                                                                    class="et_pb_module et_pb_text et_pb_text_21  et_pb_text_align_left et_pb_bg_layout_light">
-                                                                    <div class="et_pb_text_inner">
-                                                                        <h4>{{educacion.titulo}}</h4>
-                                                                        <p>{{educacion.descrip}}</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div
-                                                                class="et_pb_column et_pb_column_1_4 et_pb_column_34  et_pb_css_mix_blend_mode_passthrough et-last-child">
-                                                                <div
-                                                                    class="et_pb_module et_pb_text et_pb_text_22  et_pb_text_align_left et_pb_bg_layout_light">
-                                                                    <div class="et_pb_text_inner">{{educacion.inicio}} -
-                                                                        {{educacion.fin}}</div>
-                                                                </div>
-                                                                <div class="card" style="width: 10rem;">
-                                                                <ul class="list-group list-group-flush">
-                                                                <li class="list-group-item"><a href="">Editar</a></li>
-                                                                <li class="list-group-item"><button><a href="">Eliminar</a></button></li>
-                                                                
-                                                                </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div *ngIf="isUserLogged" class="data-control">
-                                                            <div class="btn-edit">
-                                                              <button class="btn btn-right" data-bs-toggle="modal" data-bs-target="#educacionForm" (click)="onEditarEducacion(i)"><i class="fa fa-pen"></i></button>
-                                                            </div>
-                                                            <div class="btn-edit">
-                                                              <button class="btn btn-right" (click)="onBorrarEducacion(i)" ><i class="fa fa-trash"></i></button>
-                                                            </div>
-                                                          </div>
-                                                            
-                                                    </li>
-                                                </ul>
-                                            </div>
+  <div class="mat-card">
+    <div class="card" style="margin-top: 1%; margin-bottom: 1%;">
+      <h5 style="margin-bottom: 2%; background-color: rgba(100, 177, 245, 0.463);"
+       class="card-header">Educación</h5>
+
+
+      <div class="container-fluid">
+        <ul class="items-list" id="eduList">
+          <li *ngFor="let educacion of educacionList">
+
+            <div class="row row-cols-1 row-cols-md-3 g-4" style="border-radius: 10%;  ">
+              
+                      <div class="col">
+                        <div class="card h-100" style="border-radius: 100%; border-color: white; margin-top: 0%; padding:10%">
+                          <img [src]="educacion.img" class="card-img-top" alt="Logo Centro educativo">
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="card h-100" style="margin-inline-start: -10%; border-color: white;">
+                          <div class="card-body" style="padding: 10%;">
+                            <i class="fa-solid fa-briefcase" style="margin-left: 50%;"></i>
+                            <h5 routerLink="linkcentroEdu" class="card-title"><a href="linkcentroEdu"></a>{{educacion.centro}}</h5>
+                          </div>
+                        
+                          <div class="card-body" style="padding: 10%; margin-top: -15%;">
+                            <h6 class="card-title">{{educacion.titulo}}</h6>
+        
+                            <p class="texto-justificado">{{educacion.descrip}}</p>
+
+                                <div class="card-footer" style="margin-left: 5%;">
+                                  <small style="margin-left: 30%;" class="text-muted">{{educacion.inicio}}</small><span> - </span> <small
+                                    class="text-muted">{{educacion.fin}}</small>
+                                </div>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card h-100" style="border-color: white;">
+                          <div class="card-body" style="padding: 10%;">
+
+                          </div>
+                          <div class="card-body" style="padding: 10%; margin-top: -15%;">
+                            <h6 class="text-muted">Status:</h6>
+                            <div class="card-footer" style="margin-left: 5%;">
+                              <small style="margin-left: 10%;" class="text-muted">{{educacion.status}}</small>
+                            </div>
+                            <div class="dropdown" style="margin-top: 10%;">
+                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                Acciones del campo
+                              </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                  <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#ModalEdu">Crear</button></li>
+                                  <li><button class="dropdown-item" type="button"data-bs-toggle="modal"
+                                    data-bs-target="#ModalEdu">Modificar</button></li>
+                                  <li><button class="dropdown-item" type="button">Eliminar</button></li>
+                                </ul>
+                            </div>
+                          </div>
+
+                          
+                        
+
+                          
+                        </div>
+                      </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

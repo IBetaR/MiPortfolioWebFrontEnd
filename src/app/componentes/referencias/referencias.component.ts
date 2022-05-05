@@ -10,14 +10,15 @@ import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
   styleUrls: ['./referencias.component.css']
 })
 export class ReferenciasComponent implements OnInit {
+  referenciaList: any;
 
-  referenciaList: Referencias[] = [];
+  //referenciaList: Referencias[] = [];
   isUserLogged: Boolean = false;
 
   referenciaForm: FormGroup;
 
   constructor(
-    private portfolioService: PortfolioService,
+    private datosportfolio: PortfolioService,
     private autenticacionService: AutenticacionService,
     private formBuilder: FormBuilder) {
 
@@ -30,13 +31,17 @@ export class ReferenciasComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.isUserLogged = this.autenticacionService.isUserLogged();
-    this.reloadData();
+
+    this.datosportfolio.obtenerDatos().subscribe(data=>{
+      this.referenciaList=data.referencia;
+    })
+    //this.isUserLogged = this.autenticacionService.isUserLogged();
+    //this.reloadData();
 
   }
 
   private reloadData() {
-    this.portfolioService.obtenerDatosReferencias().subscribe(
+    this.datosportfolio.obtenerDatosReferencias().subscribe(
       (data) => {
         this.referenciaList = data;
       }
@@ -65,13 +70,13 @@ export class ReferenciasComponent implements OnInit {
   onSubmit() {
     let referencia: Referencias = this.referenciaForm.value;
     if (this.referenciaForm.get('id')?.value == '') {
-      this.portfolioService.guardarNuevaReferencias(referencia).subscribe(
+      this.datosportfolio.guardarNuevaReferencias(referencia).subscribe(
         (nuevaReferencia: Referencias) => {
           this.referenciaList.push(nuevaReferencia);
         }
       );
     } else {
-      this.portfolioService.modificarReferencias(referencia).subscribe(
+      this.datosportfolio.modificarReferencias(referencia).subscribe(
         () => {
           this.reloadData();
         }
@@ -91,7 +96,7 @@ export class ReferenciasComponent implements OnInit {
   onBorrarReferencia(index: number) {
     let referencia: Referencias = this.referenciaList[index];
     if (confirm("¿Está seguro de esta acción?")) {
-      this.portfolioService.borrarReferencias(referencia.id).subscribe(
+      this.datosportfolio.borrarReferencias(referencia.id).subscribe(
         () => {
           this.reloadData();
         }

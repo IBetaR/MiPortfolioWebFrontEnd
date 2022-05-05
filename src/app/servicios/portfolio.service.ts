@@ -18,7 +18,12 @@ export class PortfolioService {
   constructor(private http:HttpClient) { }
 
       //AcercaDe
-  
+
+
+   obtenerDatos(): Observable<any> {
+    return this.http.get<any>('./assets/data/data.json');
+    
+  }
 
    obtenerDatosAcercaDe(): Observable<AcercaDe[]> {
     return this.http.get<any>(config.baseUrl+ "acercade");

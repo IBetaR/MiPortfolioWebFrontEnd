@@ -11,7 +11,9 @@ import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 })
 
 export class ExperienciaComponent implements OnInit {
-  experienciaList: Experiencia[] = [];
+  
+  experienciaList: any;
+  //experienciaList: Experiencia[] = [];
 
   isUserLogged: Boolean = false;
 
@@ -40,15 +42,15 @@ export class ExperienciaComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.isUserLogged = this.autenticacionService.isUserLogged();
-    this.reloadData();
+    this.datosPortfolio.obtenerDatos().subscribe(data=>{
+      this.experienciaList=data.experiencia;
+    })
+
+    //this.isUserLogged = this.autenticacionService.isUserLogged();
+   // this.reloadData(); 
+  
   }
 
-  //Esta fue la primera edicion
-  //this.datosPortfolio.obtenerDatosExperiencia().subscribe(data=>{
-  // this.experienciaList=this.datosPortfolio;
-  //})
-  //}
 
   private reloadData() {
     this.datosPortfolio.obtenerDatosExperiencia().subscribe

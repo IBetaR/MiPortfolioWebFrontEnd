@@ -1,100 +1,74 @@
-<div id="habilidad">
+<!-- Modal -->
+<div class="modal fade" id="ModalHass" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
-  <div class="modal fade" id="idiomasForm" tabindex="-1" aria-labelledby="idiomasFormLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="idiomasFormLabel">Idiomas</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form [formGroup]="hassForm"(ngSubmit)="onSubmit()">
-            <input type="hidden" name="id" formControlName="id">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <h5 style="padding: 2%;">Habilidades para destacar</h5>
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Habilidad</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Grado de dominio</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
 
-            <div class="row mb-3">
-              <label for="school" class="col-sm-2 col-form-label">Habilidades</label>
-              <div class="col-sm-10">
-                <input type="text" name="habilidad" formControlName="habilidad" class="form-control" required>
-              </div>
-            </div>
-
-            <div class="row mb-3">
-              <label for="title" class="col-sm-2 col-form-label">Nombre</label>
-              <div class="col-sm-10">
-                <input type="text" name="nombre" formControlName="nombre" class="form-control" required>
-              </div>
-            </div>
-
-            <div class="row mb-3">
-                <label for="title" class="col-sm-2 col-form-label">Porcentaje</label>
-                <div class="col-sm-10">
-                  <input type="text" name="porcentaje" formControlName="porcentaje" class="form-control" required>
-                </div>
-              </div>
-
-            <div class="text-center">
-              <button type="button" class="btn btn-secondary me-4" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Save changes</button>
-            </div>
-          </form>
-        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="container">
-    <h1>HaSs</h1>
-    <div class="card-group">
+<header id="habilidad">
+  <div class="mat-card">
+    <div class="card" style="margin-top: 1%; margin-bottom: 1%;">
+      <h5 style="margin-bottom: 1%; background-color: rgba(100, 177, 245, 0.463);" class="card-header">Habilidades Hard
+        and Soft</h5>
 
-      <div class="card">
+      <body class="mat-card" style="border-color: rgb(209, 141, 141);" id="hass">
+        <section>
 
-        <div class="card-body" style="padding-top: 8%; padding-bottom: 5%; padding-left: 10%;">
-          <h5 class="card-title">
-            <p class="card-text">Manejo de Herramientas tech</p>
-          </h5>
-        </div>
+          <div class="container-fluid">
+            <ul class="items-list" id="hassList">
+              <li *ngFor="let habilidad of hassList">
 
-      </div>
-      <div class="card">
 
-        <div class="card-body" style="padding-top: 5%; padding-bottom: 5%;">
-          <h5 class="card-title">Estimado</h5>
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-              aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+                <div class="card" style="width: 90em;">
+                  <div class="card-body" style="width: 32 em;">
+                    <h5 class="card-title">{{habilidad.nombre}}</h5>
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 50%;" aria-valuenow="25"
+                      aria-valuemin="0" aria-valuemax="100">
+                      <label style="background-color: rgb(107, 206, 65)" for="progress">Progreso</label>
+                    </div>
+                    <div class="dropdown" style="margin-top: 1%;">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Acciones del campo
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+                            data-bs-target="#ModalHass">Crear</button></li>
+                        <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+                            data-bs-target="#ModalHass">Modificar</button></li>
+                        <li><button class="dropdown-item" type="button">Eliminar</button></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </li>
+            </ul>
           </div>
-        </div>
-      </div>
-      <div class="card">
-
-        <div class="card-body" style="padding-top: 5%; padding-left: 5%; padding-bottom: 5%;">
-
-          <div class="card text-center"
-            style="width: 12rem; height:5rem  ; border-color: aliceblue; padding: 0%; background-color: rgb(255, 255, 255); border-width: 0.1rem;">
-            <div class="card-body">
-
-              <button class="btn btn-secondary btn-sm"> Editar sección <button class="card-title"><i
-                    class="fa fa-pencil-square-o" aria-hidden="true"></i></button></button>
-
-            </div>
-
-          </div>
-
-        </div>
-        <div class="card-body" style="padding-top: 5%; padding-left: 5%; padding-bottom: 5%;">
-
-          <div class="card text-center"
-            style="width: 12rem; height:5rem  ; border-color: aliceblue; padding: 0%; background-color: rgb(255, 255, 255); border-width: 0.1rem;">
-            <div class="card-body">
-
-              <button class="btn btn-secondary btn-sm" style="background-color: rgb(247, 121, 121);"> Eliminar
-                sección<button class="card-title" style="border-radius: 0%;"><i class="fa fa-trash-o"
-                    aria-hidden="true"></i></button></button>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
+        </section>
+      </body>
     </div>
+  </div>
+</header>

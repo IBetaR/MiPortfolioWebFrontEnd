@@ -1,158 +1,102 @@
-
+<!--COmponente listo/cargar en proyecto definitivo-->
 <div id="acercade">
-
+  <div class="modal fade" id="ModaAcd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   
-  <header class="container-fluid">
-    <div class="card">
-      <div class="card_img">
-        <img src="https://avatars.githubusercontent.com/u/94482314?v=4" alt="user-image">
-      </div>
-      <div class="card">
-        <!-- Here I create a New Div for user info with class name card_info -->
-        <a href="#!">loremIpsum.com</a>
-        <h1><i class="fa fa-address-card-o" aria-hidden="true"></i></h1>
-        <h1>
-          <p>Acerca de mi</p>
-          
-        </h1>
-
-        <div class="card-group">
-          <div class="card">
-            <ul class="items-list" id="acercadeList">
-              <li *ngFor="let acercade of acercaDeList, let i = index">
-
-              <h5 class="card-title">{{acercade.resumencv}}</h5>
-              <h5 class="card-title">Resumen CV</h5>
-            <p class="card-text">Resumen curricular - breve presentación personal</p>
-            <p class="card-text"><small class="text-muted">Last updated dsd 3 mins ago</small></p>
-            </ul>
-            
-
-            <div class="et-l et-l--post">
-              
-              <div class="et_builder_inner_content et_pb_gutters3">
-                <div class="et_pb_section et_pb_section_0 et_section_regular">
-                  <div class="et_pb_row et_pb_row_0 et_hover_enabled">
-                    <div class="et_pb_column et_pb_column_3_5 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough">
-                      <div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-                        <div class="et_pb_text_inner">
-                          
-                          <h1>Ilich Betancourt Rangel</h1>
-                          <button class="btn btn-secondary btn-sm"> Editar sección <button class="card-title"><i
-                                class="fa fa-pencil-square-o" aria-hidden="true"></i></button></button>
-
-
-                          <h1><i class="fa fa-address-card-o" aria-hidden="true"></i></h1>
-                          <p>Acerca de mi ds</p>
-                        </div>
-                        <button class="btn btn-secondary btn-sm" style="background-color: rgb(247, 121, 121);"> Eliminar
-                          sección<button class="card-title" style="border-radius: 0%;"><i class="fa fa-trash-o"
-                              aria-hidden="true"></i></button></button>
-
-
-                      </div>
-
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-            
-            </div>
-
-          </div>
-
-
-        
-        
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <h5 style="padding: 2%;">Datos personales del perfil</h5>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Nombre(s) y apellido(s)</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-
-      </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Título - Perfil Profesional</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ingrese un resumen de su Curriculum Vitae</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ingrese imagen de perfil (URL)</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
       
-
-
-
-      <div class="card border-secundary mb-3">
-        <div class="card-body">
-          <ul class="items-list" id="acercadeList">
-            <li *ngFor="let acercade of acercaDeList, let i = index">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text"> Cambiar </p>
-          <p class="card-text"><small class="text-muted">Last updated dasd 3 mins ago</small></p>
-                  <div class="data-control">
-                    <div class="btn-edit">
-                      <button class="btn btn-secondary btn-sm" style="background-color: rgb(50, 158, 225);"
-                        data-bs-toggle="modal" data-bs-target="#educacionForm"><i class="fa fa-pen"></i></button>
-                    </div>
-                    <div class="btn-edit">
-                      <button class="btn btn-secondary btn-sm" style="background-color: rgb(247, 121, 121);"><i
-                          class="fa fa-trash"></i></button>
-                    </div>
-                  </div>
-                  
-
-          <button class="btn btn-secondary btn-sm"> Editar sección <button class="card-title"><i
-                class="fa fa-pencil-square-o" aria-hidden="true"></i></button></button>
-
-
-
-
-          <button class="btn btn-secondary btn-sm" style="background-color: rgb(247, 121, 121);"> Eliminar
-            sección<button class="card-title" style="border-radius: 0%;"><i class="fa fa-trash-o"
-                aria-hidden="true"></i></button></button>
-
-              </li>
-          </ul>
-
-          <div class="modal fade" id="educationForm" tabindex="-1" aria-labelledby="educationFormLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="educationFormLabel">Educacion</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <form >
-                    <input type="hidden" name="id" formControlName="id">
-        
-                    <div class="row mb-3">
-                      <label for="school" class="col-sm-2 col-form-label">School</label>
-                      <div class="col-sm-10">
-                        <input type="text" name="school" formControlName="school" class="form-control" required>
-                      </div>
-                    </div>
-        
-                    <div class="row mb-3">
-                      <label for="title" class="col-sm-2 col-form-label">Title</label>
-                      <div class="col-sm-10">
-                        <input type="text" name="title" formControlName="title" class="form-control" required>
-                      </div>
-                    </div>
-        
-                    <div class="row mb-3">
-                      <label for="score" class="col-sm-2 col-form-label">Score</label>
-                      <div class="col-sm-10">
-                        <input type="number" name="score" formControlName="score" class="form-control" required>
-                      </div>
-                    </div>
-        
-                    <div class="row mb-3">
-                      <label for="score" class="col-sm-2 col-form-label">Image</label>
-                      <div class="col-sm-10">
-                        <input type="text" name="img" formControlName="img" class="form-control" required>
-                      </div>
-                    </div>
-        
-                    <div class="text-center">
-                      <button type="button" class="btn btn-secondary me-4" data-bs-dismiss="modal">Close</button>
-                      <button type="submit" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mat-card">
+  <div class="container-sl">
+    <div class="container-fluid" style="margin-top: 2%;">
+      <img src=""
+        style="margin-left: 15%;" class="img-fluid" alt="Banner personal">
+  
+  
+      <div class="card">
+        <div class="card-header" style="border-radius: 2%;">
+          <div class="card_img">
+            <img src="https://avatars.githubusercontent.com/u/94482314?v=4" alt="user-image">
+  
+          </div>
+  
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <h1 id="info-name">Ilich Betancourt Rangel</h1>
+              <p>Desarrollador Web Full Stack Jr.</p>
+              <footer class="blockquote-footer">Desarrollador Web Full Stack Jr. <cite title="Source Title">#Argentina
+                  Programa</cite></footer>
+            </blockquote>
+  
+            <div id="info-contact">
+              <span id="info-ubication">Río Negro (Argentina) </span>
+              <span><a href="#">Información de contacto</a></span>
             </div>
+
+            <div class="dropdown" style="margin-top: 1%;">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                Acciones del campo
+              </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+                    data-bs-target="#ModaAcd">Crear</button></li>
+                  <li><button class="dropdown-item" type="button"data-bs-toggle="modal"
+                    data-bs-target="#ModaAcd">Modificar</button></li>
+                  <li><button class="dropdown-item" type="button">Eliminar</button></li>
+                </ul>
+            </div>
+  
+  
+  
+          </div>
+  
+          <div class="card-body" style="border-bottom: 1ch;">
+            <h5 class="card-title">Acerca de mi</h5>
+            <p class="card-text">
+              acá resumen CV
+            </p>
+  
           </div>
         </div>
-
       </div>
+    </div>
+  </div>
+  </div>
+  
+  </div>

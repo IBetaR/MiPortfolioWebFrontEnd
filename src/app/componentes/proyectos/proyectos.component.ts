@@ -16,7 +16,7 @@ export class ProyectosComponent implements OnInit {
   proyectosForm: FormGroup;
 
   constructor(
-    private portfolioService: PortfolioService,
+    private datosPortfolio: PortfolioService,
     private autenticacionService: AutenticacionService,
     private formBuilder: FormBuilder) {
 
@@ -29,12 +29,16 @@ export class ProyectosComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.isUserLogged = this.autenticacionService.isUserLogged();
-    this.reloadData();
+    this.datosPortfolio.obtenerDatos().subscribe(data=>{
+      this.proyectosList=data.proyecto;
+    })
+
+    //this.isUserLogged = this.autenticacionService.isUserLogged();
+    //this.reloadData();
   }
 
   private reloadData() {
-    this.portfolioService.obtenerDatosProyectos().subscribe(
+    this.datosPortfolio.obtenerDatosProyectos().subscribe(
       (data) => {
         this.proyectosList = data;
       }
@@ -60,13 +64,13 @@ export class ProyectosComponent implements OnInit {
   onSubmit() {
     let proyecto: Proyectos = this.proyectosForm.value;
     if (this.proyectosForm.get('id')?.value == '') {
-      this.portfolioService.guardarNuevoProyectos(proyecto).subscribe(
+      this.datosPortfolio.guardarNuevoProyectos(proyecto).subscribe(
         (nuevoProyecto: Proyectos) => {
           this.proyectosList.push(nuevoProyecto);
         }
       );
     } else {
-      this.portfolioService.modificarProyectos(proyecto).subscribe(
+      this.datosPortfolio.modificarProyectos(proyecto).subscribe(
         () => {
           this.reloadData();
         }
@@ -87,7 +91,7 @@ export class ProyectosComponent implements OnInit {
   onBorrarProyecto(index: number) {
     let proyecto: Proyectos = this.proyectosList[index];
     if (confirm("¿Está seguro de esta acción?")) {
-      this.portfolioService.borrarProyectos(proyecto.id).subscribe(
+      this.datosPortfolio.borrarProyectos(proyecto.id).subscribe(
         () => {
           this.reloadData();
         }

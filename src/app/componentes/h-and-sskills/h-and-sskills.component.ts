@@ -31,8 +31,12 @@ export class HAndSskillsComponent implements OnInit {
    }
 
     ngOnInit(): void {
-      this.isUserLogged = this.autenticacionService.isUserLogged();
-      this.reloadData();
+
+      this.datosPortfolio.obtenerDatos().subscribe(data=>{
+        this.hassList=data.habilidad;
+      })
+      //this.isUserLogged = this.autenticacionService.isUserLogged();
+      //this.reloadData();
 
     }
 

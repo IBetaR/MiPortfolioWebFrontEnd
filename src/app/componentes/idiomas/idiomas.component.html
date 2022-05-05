@@ -1,124 +1,104 @@
 <div id="idioma">
+  <!-- Modal -->
+<div class="modal fade" id="ModalIdio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
-    <div class="modal fade" id="idiomasForm" tabindex="-1" aria-labelledby="idiomasFormLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="idiomasFormLabel">Idiomas</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <form [formGroup]="idiomasForm"(ngSubmit)="onSubmit()">
-                <input type="hidden" name="id" formControlName="id">
-    
-                <div class="row mb-3">
-                  <label for="school" class="col-sm-2 col-form-label">Idioma</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="idioma" formControlName="idioma" class="form-control" required>
-                  </div>
-                </div>
-    
-                <div class="row mb-3">
-                  <label for="title" class="col-sm-2 col-form-label">Nivel</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="nivel" formControlName="nivel" class="form-control" required>
-                  </div>
-                </div>
-    
-                <div class="row mb-3">
-                    <label for="title" class="col-sm-2 col-form-label">Habla</label>
-                    <div class="col-sm-10">
-                      <input type="text" name="habla" formControlName="habla" class="form-control" required>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label for="title" class="col-sm-2 col-form-label">Lee</label>
-                    <div class="col-sm-10">
-                      <input type="text" name="lee" formControlName="lee" class="form-control" required>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label for="title" class="col-sm-2 col-form-label">Escribe</label>
-                    <div class="col-sm-10">
-                      <input type="text" name="escribe" formControlName="escribe" class="form-control" required>
-                    </div>
-                  </div>
-    
-                <div class="text-center">
-                  <button type="button" class="btn btn-secondary me-4" data-bs-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-primary">Save changes</button>
-                </div>
-              </form>
-            </div>
-          </div>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <h5 style="padding: 2%;">Idiomas</h5>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Idioma</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Habla - Grado de dominio</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Lee - Grado de dominio</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Escribe - Grado de dominio</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
         </div>
       </div>
-       
+    </div>
+</div>
 
-      
-<header class="container-fluid">
-<body
-    class="page-template-default page page-id-219166 theme-Divi woocommerce-js et_pb_button_helper_class et_fullwidth_nav et_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_footer_columns4 et_cover_background et_pb_gutter osx et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db chrome">
-    <div id="page-container" style="padding-top: 5px; margin-top: -1px;" class="et-animated-content">
-
-        <div id="et-main-area">
-            <div id="main-content">
-                <article id="post-219166" class="post-219166 page type-page status-publish hentry">
-                    <div class="entry-content">
-                        <div class="et-l et-l--post">
-                            <div class="et_builder_inner_content et_pb_gutters3">
-                                <div class="et_pb_section et_pb_section_0 et_section_regular">
-                                    
-                                </div>
+<header>
+    <div class="mat-card">
+      <div class="card" style="margin-top: 1%; margin-bottom: 1%;">
+        <h5 style="margin-bottom: 1%; background-color: rgba(100, 177, 245, 0.463);" class="card-header">Idiomas</h5>
 
 
-                                
-                                    <div class="et_pb_row et_pb_row_1">
-                                        <div
-                                            class="et_pb_column et_pb_column_1_3 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough">
-                                            <div
-                                                class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_dark">
-                                                <div class="et_pb_text_inner">
-                                                    <h2>Idiomas</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div
-                                            class="et_pb_column et_pb_column_1_3 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough">
-                                            <div
-                                                class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_right et_pb_bg_layout_dark">
+        <body class="mat-card" style="border-color: rgb(209, 141, 141);" id="hass">
+          <section>
 
-                                                <div class="et_pb_text_inner">Resumen de estudios realizados</div>
-                                            </div>
-                                        </div>
 
-                                    </div>
-                                
+            <div class="container-fluid">
+              <ul class="items-list" id="hassList">
+                <li *ngFor="let idioma of idiomasList">
 
-                                    <div class="et_pb_section et_pb_section_3 et_section_regular">
-                                        <div class="et_pb_with_border et_pb_row et_pb_row_10">
-                                            <div
-                                                class="et_pb_column et_pb_column_4_4 et_pb_column_30  et_pb_css_mix_blend_mode_passthrough et-last-child">
-                                                <div
-                                                    class="et_pb_module et_pb_text et_pb_text_19  et_pb_text_align_left et_pb_bg_layout_light">
-                                                    <div class="et_pb_text_inner">
-                                                        <h2>Idiomas</h2>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        
 
-                                    </div>
-                                
-                            </div>
-                        </div>
+                  <div class="card" style="width: 90em;">
+                    <div class="card-body" style="width: 32 em;">
+                      <h5 class="card-title">{{idioma.idioma}}</h5>
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 50%;" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <label style="background-color: rgb(107, 206, 65)" for="progress">{{idioma.habla}}</label>
+                      </div>
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 50%;" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <label style="background-color: rgb(81, 153, 236)" for="progress">{{idioma.lee}}</label>
+                      </div>
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 50%;" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <label style="background-color: rgb(206, 65, 192)" for="progress">{{idioma.escribe}}</label>
+                      </div>
+                      <div class="dropdown" style="margin-top: 1%;">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Acciones del campo
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                          <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+                              data-bs-target="#ModalIdio">Crear</button></li>
+                          <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+                              data-bs-target="#ModalIdio">Modificar</button></li>
+                          <li><button class="dropdown-item" type="button">Eliminar</button></li>
+                        </ul>
+                      </div>
                     </div>
-                </article>
+                  </div>
+
+
+                </li>
+              </ul>
             </div>
 
-        </div>
-    </div>
-</body>
 
+          </section>
+
+        </body>
+      </div>
+    </div>
+</header>
+</div>
