@@ -44,13 +44,15 @@ https://ibrmiportfolioweb.web.app/
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
 
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                  </div>
+
               </form>
           </div>
       
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Guardar</button>
-        </div>
+        
       </div>
     </div>
   </div>
@@ -92,20 +94,15 @@ https://ibrmiportfolioweb.web.app/
               id="dropdownMenu2" data-bs-toggle="dropdown" (click)="onNuevoAcercaDe()" aria-expanded="false">
                 Acciones del campo
               </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+                  data-bs-target="#ModalAcd">Crear</button></li>
+                <li><button class="dropdown-item" type="button"data-bs-toggle="modal"
+                  data-bs-target="#ModalAcd">Modificar</button></li>
+                <li><button class="dropdown-item" type="button">Eliminar</button></li>
+              </ul>
               </div>
-
-              <button class="btn btn-secondary dropdown-toggle" type="button" 
-              id="dropdownMenu2" data-bs-toggle="dropdown" (click)="onNuevoAcercaDe()" aria-expanded="false">
-                Acciones del campo
-              </button>
-
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                  <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
-                    data-bs-target="#ModalAcd">Crear</button></li>
-                  <li><button class="dropdown-item" type="button"data-bs-toggle="modal"
-                    data-bs-target="#ModalAcd">Modificar</button></li>
-                  <li><button class="dropdown-item" type="button">Eliminar</button></li>
-                </ul>
+  
             </div>
   
   

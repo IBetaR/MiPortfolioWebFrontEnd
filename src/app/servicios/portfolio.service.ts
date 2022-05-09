@@ -9,6 +9,7 @@ import { Idiomas } from '../data/Idiomas';
 import { Proyectos } from '../data/Proyectos';
 import { Referencias } from '../data/Referencias';
 import { AcercaDe } from '../data/AcercaDe';
+import { observableToBeFn } from 'rxjs/internal/testing/TestScheduler';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,13 @@ import { AcercaDe } from '../data/AcercaDe';
 export class PortfolioService {
 
   constructor(private http:HttpClient) { }
+      //encabezado
+
+    //logout(): Observable<any>{
+     // return this.http.get<any>(config.baseUrl+"iniciar-session")
+    //}
+
+
 
       //AcercaDe
 

@@ -24,17 +24,18 @@ export class ProyectosComponent implements OnInit {
       id: [''],
       nombre: ['', [Validators.required]],
       descripcion: ['', [Validators.required]],
+      url:['', [Validators.required]],
     })
   }
 
   ngOnInit(): void {
 
-    this.datosPortfolio.obtenerDatos().subscribe(data=>{
-      this.proyectosList=data.proyecto;
-    })
+    //this.datosPortfolio.obtenerDatos().subscribe(data=>{
+     // this.proyectosList=data.proyecto;
+   // })
 
-    //this.isUserLogged = this.autenticacionService.isUserLogged();
-    //this.reloadData();
+    this.isUserLogged = this.autenticacionService.isUserLogged();
+    this.reloadData();
   }
 
   private reloadData() {
@@ -50,6 +51,7 @@ export class ProyectosComponent implements OnInit {
       id: '',
       nombre: '',
       descripcion: '',
+      url: '',
     })
   }
 
@@ -58,6 +60,7 @@ export class ProyectosComponent implements OnInit {
       id: proyecto.id,
       nombre: proyecto.nombre,
       descripcion: proyecto.descripcion,
+      url: proyecto.url
     })
   }
 

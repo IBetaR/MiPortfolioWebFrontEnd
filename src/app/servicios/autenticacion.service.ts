@@ -14,7 +14,7 @@ export class AutenticacionService {
   constructor(private http:HttpClient) {}
     
    IniciarSesion(credentials: IniciarSesionDto): Observable<boolean>{
-     return this.http.post<boolean>(config.baseUrl + "/iniciar-session", credentials).pipe(
+     return this.http.post<boolean>(config.baseUrl + "iniciar-session", credentials).pipe(
        tap((response:boolean)=>{
          if(response)
          sessionStorage.setItem("usuario","ilichbr@gmail.com");
@@ -22,6 +22,17 @@ export class AutenticacionService {
      );
        //return data;
    }
+
+   //CerrarSesion(credentials:IniciarSesionDto, usuario:IniciarSesionDto): Observable<boolean>{
+     //return this.logout(config.baseUrl + "/cerrar-sesion", credentials).pipe(
+     // tap((response:boolean)=>{
+      //  if(response)
+       // sessionStorage.removeItem("usuario");
+      //);
+   //}
+
+
+
    public logout(){
      sessionStorage.removeItem("usuario");
    }

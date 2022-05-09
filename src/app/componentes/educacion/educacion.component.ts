@@ -10,8 +10,8 @@ import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-  educacionList:any;
-  //educacionList: Educacion[] = [];
+  //educacionList:any;
+  educacionList: Educacion[] = [];
   isUserLogged: Boolean = false;
 
   educacionForm: FormGroup;
@@ -39,12 +39,12 @@ export class EducacionComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data=>{
-      this.educacionList = data.educacion;
-    });
+    //this.datosPortfolio.obtenerDatos().subscribe(data=>{
+      //this.educacionList = data.educacion;
+    //});
 
-    //this.isUserLogged = this.autenticacionService.isUserLogged();
-    //this.reloadData();
+    this.isUserLogged = this.autenticacionService.isUserLogged();
+    this.reloadData();
   }
   private reloadData() {
     this.datosPortfolio.obtenerDatosEducacion().subscribe

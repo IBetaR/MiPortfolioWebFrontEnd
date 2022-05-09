@@ -10,9 +10,9 @@ import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
   styleUrls: ['./referencias.component.css']
 })
 export class ReferenciasComponent implements OnInit {
-  referenciaList: any;
+  //referenciaList: any;
 
-  //referenciaList: Referencias[] = [];
+  referenciaList: Referencias[] = [];
   isUserLogged: Boolean = false;
 
   referenciaForm: FormGroup;
@@ -32,11 +32,13 @@ export class ReferenciasComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.datosportfolio.obtenerDatos().subscribe(data=>{
-      this.referenciaList=data.referencia;
-    })
-    //this.isUserLogged = this.autenticacionService.isUserLogged();
-    //this.reloadData();
+    this.isUserLogged = this.autenticacionService.isUserLogged();
+    this.reloadData();
+
+    //this.datosportfolio.obtenerDatos().subscribe(data=>{
+      //this.referenciaList=data.referencia;
+    //})
+    
 
   }
 

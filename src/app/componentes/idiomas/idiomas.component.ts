@@ -39,12 +39,12 @@ export class IdiomasComponent implements OnInit {
 
      ngOnInit(): void {
 
-      this.datosPortfolio.obtenerDatos().subscribe(data=>{
-        this.idiomasList=data.idioma;
-      })
-      //this.isUserLogged = this.autenticacionService.isUserLogged();
+      //this.datosPortfolio.obtenerDatos().subscribe(data=>{
+        //this.idiomasList=data.idioma;
+      //})
+      this.isUserLogged = this.autenticacionService.isUserLogged();
       
-      //this.reloadData();
+      this.reloadData();
     }
 
     private reloadData() {

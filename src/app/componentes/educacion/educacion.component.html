@@ -7,7 +7,9 @@
             <h5 style="padding: 2%;">Educación</h5>
 
 
-            <div class="modal-body">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+          
+          <div class="modal-body; w3-container w3-card-4 w3-light-grey">
               <form [formGroup]="educacionForm" (ngSubmit)="onSubmit()"><!---->
                 <input type="hidden" name="id" formControlName="id">
 
@@ -77,20 +79,13 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
 
-                    <div class="modal-header">
-                      <label for="url"><h6>Ingrese imagen de perfil (URL)</h6></label>
-                          
-                        <input type="text" name="url" formControlName="url" 
-                        class="form-control" required style="width: 70%">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
 
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-primary">Guardar</button>
+                  <button type="submit" class="btn btn-primary">Guardar</button>
                 </div>
-          </form>
-        </div>
+             </form>
+           </div>
       </div>
     </div>
   </div>
@@ -98,88 +93,104 @@
   <div class="mat-card">
     <div class="card" style="margin-top: 1%; margin-bottom: 1%;">
       <h5 style="margin-bottom: 2%; background-color: rgba(100, 177, 245, 0.463);"
-         class="card-header">Educación</h5>
-  
-      <div class="container-fluid">
-        <ul class="items-list" id="eduList">
-          <li *ngFor="let educacion of educacionList">
-  
+       class="card-header">Educación
+       <div *ngIf="isUserLogged" class="data-control">
+       <div class="dropdown" style="margin: auto; width: fit-content; margin-top: 0%;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+          Acciones del campo
+        </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <li><button class="dropdown-item" type="button" (click)="onNuevaEducacion()"  data-bs-toggle="modal"
+              data-bs-target="#ModalEdu" >Crear</button></li>
+            
+          </ul>
+      </div>
+
+    </div>
+
+      
+      </h5>
+
+
+      <div class="container-fluid" style="background-color: rgb(255, 255, 255);">
+        <ul class="items-list" id="experienciaList">
+          <li *ngFor="let educacion of educacionList; let i = index">
+
             <div class="row row-cols-1 row-cols-md-3 g-4" style="border-radius: 10%;  ">
               
-               <div class="col">
-                 <div class="card h-100" style="border-radius: 100%; border-color: white; margin-top: 0%; padding:10%">
-                   <img [src]="educacion.img" class="card-img-top" alt="Logo Centro educativo">
-                 </div>
-               </div>
-  
-                <div class="col">
-                  <div class="card h-100" style="margin-inline-start: -10%; border-color: white;">
-                      <div class="card-body" style="padding: 10%;">
-                        <i class="fa-solid fa-briefcase" style="margin-left: 50%;"></i>
-                        <h5 routerLink="linkcentroEdu" class="card-title"><a href="linkcentroEdu"></a>{{educacion.centro}}</h5>
+                      <div class="col">
+                        <div class="card h-100" style="border-radius: 100%; border-color: white; margin-top: 0%;margin-left: -18%; padding:20%; ">
+                          <img [src]="educacion.img" class="card-img-top" alt="Logo Centro Educativo">
+                        </div>
                       </div>
-                 
-                      <div class="card-body" style="padding: 10%; margin-top: -15%;">
-                          <h6 class="card-title">{{educacion.titulo}}</h6>
-                
-                          <p class="texto-justificado">{{educacion.descrip}}</p>
-        
-                            <div class="card-footer" style="margin: auto; width: fit-content;">
-                                <small style="margin: auto;" class="text-muted"><label for="inicio"></label>
-                                  {{educacion.inicio}}
-                                </small>
-                                <span>
-                                    - 
-                                </span>
-                                <small class="text-muted"><label for="fin"></label>
-                                  {{educacion.fin}}
-                                </small>
-                            </div>
-                        </div>
-                  </div>
-                     </div>
-                        <div class="col">
-                          <div class="card h-100" style="border-color: white;">
-                            <div class="card-body" style="padding: 10%;">
-  
-                            </div>
-                            <div class="card-body" style="padding: 10%; margin: auto;">
-                              <h6 class="text-muted">Status:</h6>
-                              <div class="card-footer" style="margin: auto;">
-                                <small style="margin: auto;" class="text-muted">{{educacion.status}}</small>
-                              </div>
-  
-                              <div class="dropdown" style="margin-top: 10%;">
-  
-                                <div *ngIf="isUserLogged" class="btn-edit">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" 
-                                id="dropdownMenu2" data-bs-toggle="dropdown" (click)="onNuevaEducacion()" aria-expanded="false">
-                                  Acciones del campo
-                                </button>
-                                </div>
 
-                                <button class="btn btn-secondary dropdown-toggle" type="button" 
-                                id="dropdownMenu2" data-bs-toggle="dropdown" (click)="onNuevaEducacion()" aria-expanded="false">
-                                  Acciones del campo
-                                </button>
-  
-        
-                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                    <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
-                                      data-bs-target="#ModalEdu">Crear</button></li>
-                                    <li><button class="dropdown-item" type="button"data-bs-toggle="modal"
-                                      data-bs-target="#ModalEdu">Modificar</button></li>
-                                    <li><button class="dropdown-item" type="button">Eliminar</button></li>
-                                  </ul>
-                              </div>
-                            </div>
+                      <div class="col">
+                        <div class="card h-100" style="margin-inline-start: -10%; border-color: white;">
+                          <div class="card-body" style="padding: 10%;">
+                            <i class="fa-solid fa-briefcase" style="margin-left: 50%;"></i>
+                            <h5 class="card-title">{{educacion.centro}}</h5>
                           </div>
+                        
+                          <div class="card-body" style="padding: 10%; margin-top: -15%;">
+                            <h6 class="card-title">{{educacion.titulo}}</h6>
+                            <p class="texto-justificado">{{educacion.descrip}}</p>
+
+                            <div class="card-footer" style="margin: auto; width: fit-content;">
+                              <small style="margin: auto;" class="text-muted"><label for="inicio"></label>
+                                {{educacion.inicio}}
+                              </small>
+                              <span>
+                                  - 
+                              </span>
+                              <small class="text-muted"><label for="fin"></label>
+                                {{educacion.fin}}
+                              </small>
+                          </div>
+
+                                
+                                
+                          </div>
+
                         </div>
+                      </div>
+                      <div class="col">
+                        <div class="card h-100" style="border-color: white;">
+                          <div class="card-body" style="padding: 10%;">
+
+                          </div>
+                          <div class="card-body" style="padding: 10%;margin-top: -15%;">
+                            <h6 class="text-muted">Status de Educación</h6>
+                            <div class="card-footer" style="margin-left: 5%;">
+                              <small style="margin-left: 10%;" class="text-muted">{{educacion.status}}</small>
+                            </div>
+                            
+                          </div>
+                        <div *ngIf="isUserLogged" class="data-control">
+
+                                  <div class="dropdown" style="margin: auto; width: fit-content; margin-top: 0%;">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Acciones del campo
+                                    </button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                        
+                                        <li><button class="dropdown-item" type="button"data-bs-toggle="modal"
+                                          (click)="onEditarEducacion(i)" data-bs-target="#ModalEdu">Modificar</button></li>
+                                        <li><button class="dropdown-item" (click)="onBorrarEducacion(i)" type="button">Eliminar</button></li>
+                                      </ul>
+                                  </div>
+                        </div>        
+                        </div>
+                      </div>
             </div>
           </li>
         </ul>
+        
+
+
+
       </div>
     </div>
   </div>
+  
   
 </div>

@@ -31,16 +31,24 @@ export class AcercaDeComponent implements OnInit {
       })
 
      }
+
     ngOnInit(): void {
       this.isUserLogged = this.autenticacionService.isUserLogged();
       this.reloadData();
   
     }
 
+    //OnLogoOut(): void {
+      //this.isUserLogged != this.autenticacionService.isUserLogged();
+     // this.reloadData();
+  
+   // }
+
     private reloadData(){
       this.datosPortfolio.obtenerDatosAcercaDe().subscribe(
         (data) => {
           this.acercaDeList = data;
+          console.log(data)
         });
     }
 

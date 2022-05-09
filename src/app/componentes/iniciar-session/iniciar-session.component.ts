@@ -46,6 +46,7 @@ export class IniciarSessionComponent implements OnInit {
         if (response)
           this.ruta.navigate(['/portfolio']);
           else
+          console.log("Error de validación")
           this.loginError = true;
 
       }
