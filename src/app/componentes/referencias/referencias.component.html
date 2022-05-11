@@ -1,8 +1,8 @@
-<div id="referencia">
+
   <!--Componente listo/cargar en proyecto definitivo-->
-    <div id="referencia">
+<div id="referencia">
       <!-- Modal -->
-      <div class="modal fade" id="ModalRef" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="ModalRef" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
         <div class="modal-dialog">
           <div class="modal-content">
@@ -45,85 +45,68 @@
            </div>
           </div>
         </div>
-      </div>
-    </div>
+  </div>
 
-    <div class="mat-card">
-      <div class="card" style="margin-top: 1%; margin-bottom: 1%; width: max-width; ">
-      <h5 style="margin-bottom: 2%; background-color: rgba(100, 177, 245, 0.463);"
-       class="card-header">
-       Referencias personales - Profesionales
-       <div *ngIf="isUserLogged" class="data-control">
-        <div class="dropdown" style="margin: auto; width: fit-content; margin-top: 0%;">
-         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-           Acciones del campo
-         </button>
-           <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-             <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
-               data-bs-target="#ModalRef" (click)="onNuevaReferencia()">
-               Crear</button></li>
-             
-           </ul>
-       </div>
-     </div>
-      
-      
-      </h5>
+<!--Modif-->
 
-      <div class="row" style="margin-bottom: 1%;margin-left: 0.5%; width: max-width;">
-        <ul class="items-list" id="eduList">
-            <li *ngFor="let referencia of referenciaList let i = index">
-                  <div class="col-sm-6" style="width: auto;">
-                  
-                      <div class="card-body">
-
-                          <div class="card" style="width: 33em;height: 6em; margin-top: -1%; margin-bottom: 1%; margin-left: 1%;">
-                  
-                              <div class="card-header">
-                                  <h6>{{referencia.nombrecompleto}}</h6>
-                              </div>
-                              <ul class="list-group list-group-flush" style="margin-top: 0.5em; margin-right: 70%; margin-left: 2%;">
-                                  <a href={{referencia.linkedin}} style="margin-left: 1%;" class="btn btn-secondary">Ir a referencia</a> 
-                              </ul>
-                          </div>
-                          
-                         
+  <div style="margin-top: 1%; margin-bottom: 1%; width: max-width; ">
+          <h5 style="margin-bottom: 0%; background-color: rgba(100, 177, 245, 0.463);"
+              class="card-header">
+              Referencias personales - Profesionales
+              <div *ngIf="isUserLogged" class="data-control">
+                <div class="dropdown" style="margin: auto; width: fit-content; margin-top: 0%;">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                   Acciones del campo
+                  </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                      <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+                      data-bs-target="#ModalRef" (click)="onNuevaReferencia()">
+                      Crear</button></li>
+                  </ul>
+                </div>
+              </div>
+          </h5>
+  </div>
+    
+    <div>
+      <ul class="items-list" id="referenciaList">
+        <li *ngFor="let referencia of referenciaList let i = index">
+          <div class="cajaP">
+    
+                <div class="card" style="width: 50%;height: 7em; margin-top: 1%; margin-bottom: 1%; margin-left: -1%;">
+                                
+                      <div class="card-header">
+                          <h6>{{referencia.nombrecompleto}}</h6>
                       </div>
-                  
-                  </div>
-                  <div class="col-sm-6" style="width: max-width; margin-left: 1%;">
-                  <div class="card" style="height: 8.1em;">
-                      <div class="card-body">
-                      <h5 class="card-title">Observaciones - Otros Datos</h5>
-                      
-                      <p class="card-text"> {{referencia.otrodato}}</p>
-                      
-                      </div>
+                      <ul class="list-group list-group-flush" style="margin-top: 0.5em; margin-right: 70%; margin-left: 2%;">
+                          <a href="{{referencia.linkedin}}" style="margin-left: 1%;" class="btn btn-primary">Ir a referencia</a> 
+                      </ul>
+                </div>
+              
+                <div class="card" style="width: 50%;height: 7em; margin-top: 1%; margin-bottom: 1%; margin-left: 1%;">
+                            
+                    <div class="card-header">
+                      <h5 class="card-title">{{referencia.otrodato}}</h5>
+                    </div>
+                    <div *ngIf="isUserLogged" class="data-control">
 
-                     <div *ngIf="isUserLogged" class="data-control">
-
-                        <div class="dropdown" style="margin: auto; width: fit-content; margin-top: 0%;">
-                          <button class="btn btn-secondary dropdown-toggle" style="margin-bottom: 2%;" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="dropdown"  style="margin: auto; width: fit-content; margin-top: 0%;">
+                          <button class="btn btn-secondary dropdown-toggle" style="margin-top: 0.5em; margin-right: 190%; margin-left: 2%;" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                             Acciones del campo
                           </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                              
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+
                               <li><button class="dropdown-item" type="button"data-bs-toggle="modal"
                                 (click)="onEditarReferencia(i)" data-bs-target="#ModalRef">Modificar</button></li>
                               <li><button class="dropdown-item" (click)="onBorrarReferencia(i)" type="button">Eliminar</button></li>
-                            </ul>
+
+                          </ul>
                         </div>
-                      </div>
-
-                      
-                   </div>
+                    </div>
                 </div>
-            </li>
-        </ul>
-                  
-      </div>
 
-    </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
-

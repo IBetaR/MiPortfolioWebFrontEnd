@@ -6,11 +6,6 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <h5 style="padding: 2%;">Experiencia Laboral</h5>
-          <div class="dropdown" style="margin: auto; width: fit-content; margin-top: 0%;">
-          
-          </div>
-          <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-          
           <div class="modal-body; w3-container w3-card-4 w3-light-grey">
             <form [formGroup]="experienciaForm" (ngSubmit)="onSubmit()"><!---->
               <input type="hidden" name="id" formControlName="id">
@@ -75,7 +70,7 @@
   
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="submit" class="btn btn-primary"data-bs-dismiss="modal">Guardar</button>
           </div>
       </form>
     </div>
@@ -83,10 +78,11 @@
 </div>
 </div>
 
-    <div class="mat-card">
-      <div class="card" style="margin-top: 1%; margin-bottom: 1%;">
+    <div style="margin-top: 1%; margin-bottom: 1%; width: max-width; ">
+          
         <h5 style="margin-bottom: 2%; background-color: rgba(100, 177, 245, 0.463);"
-         class="card-header">Experiencia Laboral
+         class="card-header">
+         Experiencia Laboral
          <div *ngIf="isUserLogged" class="data-control">
          <div class="dropdown" style="margin: auto; width: fit-content; margin-top: 0%;">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
@@ -102,7 +98,7 @@
 
         
         </h5>
-  
+  </div>
   
         <div class="container-fluid" style="background-color: rgb(255, 255, 255);">
           <ul class="items-list" id="experienciaList">
@@ -114,6 +110,7 @@
                           <div class="w3-card4" style="width:100%">
                            <div class="card h-100" style="border-radius: 10%; border-color: rgb(255, 255, 255); margin-top: -6%;margin-left: -18%; padding:20%;  ">
                             <img [src]="experiencia.img" class="card-img-top" alt="Logo Empresa">
+                            
                            </div>
                           </div>
                         </div>
@@ -183,6 +180,28 @@
         
 
         </div>
-      </div>
-    </div>
+      
+    
   </div>
+
+
+  <!--Modif-->
+
+  <!--<div style="margin-top: 1%; margin-bottom: 1%; width: max-width; ">
+    <h5 style="margin-bottom: 0%; background-color: rgba(100, 177, 245, 0.463);"
+        class="card-header">
+        Referencias personales - Profesionales
+        <div *ngIf="isUserLogged" class="data-control">
+          <div class="dropdown" style="margin: auto; width: fit-content; margin-top: 0%;">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+             Acciones del campo
+            </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+                data-bs-target="#ModalExp" (click)="onNuevaExperiencia()">
+                Crear</button></li>
+            </ul>
+          </div>
+        </div>
+    </h5>
+</div>-->

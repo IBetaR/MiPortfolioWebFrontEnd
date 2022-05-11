@@ -13,3 +13,13 @@ ul {
 .texto-justificado{
     text-align: justify;
     }
+
+.cajaP {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    width: auto;
+    margin: 5px;
+        
+}

@@ -1,6 +1,5 @@
 <div id="proyecto">
   <!--Componente listo/cargar en proyecto definitivo-->
-  <div>
     <!-- Modal -->
     <div class="modal fade" id="ModalProy" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
@@ -47,60 +46,53 @@
       </div>
     </div>
 
-    <div class="mat-card">
-      <div class="card" style="margin-top: 1%; margin-bottom: 1%; width: max-width; ">
-        <h5 style="margin-bottom: 2%; background-color: rgba(100, 177, 245, 0.463);"
-         class="card-header">
-         Proyectos Desarrollados
-         <div *ngIf="isUserLogged" class="data-control">
-          <div class="dropdown" style="margin: auto; width: fit-content; margin-top: 0%;">
-           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-             Acciones del campo
-           </button>
-             <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-               <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
-                 data-bs-target="#ModalProy" (click)="onNuevoProyecto()">
-                 Crear</button></li>
-               
-             </ul>
-         </div>
-       </div>
+</div>
 
 
-        </h5>
+<div style="margin-top: 1%; margin-bottom: 1%; width: max-width; ">
+  <h5 style="margin-bottom: 0%; background-color: rgba(100, 177, 245, 0.463);"
+      class="card-header">
+      Proyectos  Desarrollados
+      <div *ngIf="isUserLogged" class="data-control">
+        <div class="dropdown" style="margin: auto; width: fit-content; margin-top: 0%;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+           Acciones del campo
+          </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+              data-bs-target="#ModalProy" (click)="onNuevoProyecto()">
+              Crear</button></li>
+          </ul>
+        </div>
+      </div>
+  </h5>
+</div>
 
-        <div class="row" style="margin-bottom: 1%;margin-left: 0.5%; width: 39em;">
-          <ul class="items-list" id="proyectosList">
-            <li *ngFor="let proyecto of proyectosList let i = index">
-              <div class="col-sm-6" style="width: auto;">
-                <div class="card">
-                  <div class="card-body">
+<div>
+  <ul class="items-list" id="referenciaList">
+    <li *ngFor="let proyecto of proyectosList let i = index">
 
-                    <div class="card"
-                      style="width: max-width;height: 6em; margin-top: -1%; margin-bottom: 1%;
-                       margin-left: 1%;">
+      <div class="cajaP">
 
-                      <div class="card-header">
-                        <h6>{{proyecto.nombre}}</h6>
-                      </div>
-                      <ul class="list-group list-group-flush"
-                        style="margin-top: 0.5em; margin-right: 70%; margin-left: 2%;">
-                        <a href={{proyecto.url}} style="margin-left: 1%;" class="btn btn-secondary">Ir a sitio Web</a>
-                      </ul>
-                    </div>
-                    
-                  </div>
-                </div>
-              </div>
-              <div class="card" style="height: 9.1em;">
-                <div class="card-body">
-                  <h5 class="card-title">Descripción - Otros Datos</h5>
-              
-                  <p class="card-text"> {{proyecto.descripcion}}</p>
+        <div class="card" style="width: 50%;height: 9em; margin-top: 1%; margin-bottom: 1%; margin-left: -1%; margin-right: 2%;">
+          <div class="card-header">
+            <h6>{{proyecto.nombre}}</h6>
+          </div>
+          <ul class="list-group list-group-flush" style="margin-top: 0.5em; margin-right: 70%; margin-left: 2%;">
+            <a href="{{proyecto.url}}" style="margin-left: 1%; margin-top: auto; margin-bottom: auto;" class="btn btn-primary">Sitio Web</a> 
+          </ul>
+        </div>
+
+        <div class="card" style="width: 50%;height: 9em; margin-top: 1%; margin-bottom: 1%; margin-left: -1%;">
+          <div class="card-header">
+            <h6>Descripción - Otros Datos</h6>
+          </div>
+          
+          <p class="card-text" style="margin-left: 2%; margin-top: 1%"> {{proyecto.descripcion}}</p>
                   <div *ngIf="isUserLogged" class="data-control">
 
-                    <div class="dropdown" style="margin: auto; width: fit-content; margin-top: 0%;">
-                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="dropdown" style="margin: auto; margin-top: 0%;">
+                      <button class="btn btn-secondary dropdown-toggle" style="margin-left: 38%; margin-top: -1%" type="button"  id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                         Acciones del campo
                       </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -111,16 +103,13 @@
                         </ul>
                     </div>
                   </div>
-
-                </div>
-              </div>
-             
-          </ul>
-
+         
+          
+          
         </div>
 
-      </div>
-    </div>
-  </div>
 
+      </div>
+    </li>
+  </ul>
 </div>

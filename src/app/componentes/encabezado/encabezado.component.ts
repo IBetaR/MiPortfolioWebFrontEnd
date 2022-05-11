@@ -12,7 +12,9 @@ export class EncabezadoComponent implements OnInit {
   //encabezado ='encabezado';
   //miPortfolio: any;
 
-  constructor(private datosPortfolio : PortfolioService,
+  constructor(
+    
+    private datosPortfolio : PortfolioService,
     private ruta:Router, ) { }
 
   ngOnInit(): void {

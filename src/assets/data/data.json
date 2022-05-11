@@ -20,7 +20,7 @@
     
     {
       "cargo":"Encargado General - Jefe de personal",
-      "empresa": "WaflesSur - Patagonia",
+      "empresa": "WaflesSur® Patagonia",
       "descrip": "Organización y Control general de operaciones, logística y personal",
       "img": "https://scontent.foes1-1.fna.fbcdn.net/v/t1.18169-9/11224258_1031228866919841_5454767341715027850_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=boWhrUb26PcAX_hK1Wh&_nc_ht=scontent.foes1-1.fna&oh=00_AT-Dl5TczzhYZvjxh0wdmK7gTFKYxumLiUaScboNlDZwyw&oe=6292E156",
       "modalidad": "Jornada completa/Temporada Verano",
@@ -56,7 +56,7 @@
     "educacion":[
 
       {
-      "centro":"Argentina Programa",
+      "centro":"Ministerio de Desarrollo Productivo, la Cámara de la Industria Argentina del Software (CESSI) y el Instituto Nacional de Tecnología Industrial (INTI)",
       "titulo": "Desarrollador Web Full Stack Jr.",
       "img": "https://argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/sliderimage1/1645588080/Banner4.png",
       "descrip": "Desarrollo Web Back End & Front End/ Java/NetBeans IDE/SprintBoot/Angular CLI",
@@ -64,18 +64,18 @@
       "inicio": "2021",
       "fin": "actualidad",
       "status": "en curso",
-      "url": "https://empleo.chaco.gob.ar/cenit#/"
+      "url": "https://argentinaprograma.inti.gob.ar/"
       },
       {
-      "centro":"Programa INFORMATORIO - Cenit",
-      "titulo": "Desarrollo Web",
+      "centro":"Gobierno del Chaco - Polo IT Chaco - UTN-FRRe y la UNCAUS",
+      "titulo": "Programación y Desarrollo Web",
       "img": "https://empleo.chaco.gob.ar/static/media/logoCapHeaderv2.2fe2a41f.png",
-      "descrip": "Desarrollo Web lenguaje Python - Django Framework/Base de Datos con MSQL server",
+      "descrip": "Desarrollo Web con Python - Django Framework/Base de Datos con MSQL server",
       "puntaje": "240 Horas - modalidad Virtual",
       "inicio": "2021",
       "fin": "2021",
       "status": "Culminado - certificado",
-      "url": "https://empleo.chaco.gob.ar/cenit#/"
+      "url": "https://empleo.chaco.gob.ar/capacitaciones/Programaci%C3%B3n-y-Desarrollo-Web"
       },
       {
       "centro":"Centro de Formación profesional CIFIC-CFP N°3 Juan Domingo Perón",
@@ -92,7 +92,7 @@
       "centro":"Centro de Formación Profesional Nº 28 Ministro José María Freire - Anexo Jujuy",
       "titulo": "Instalador de Sistemas de Aire Acondicionado",
       "img": "https://suterh.org.ar/wp-content/uploads/revslider/top1/logo-suterh-1.png",
-      "descrip": "Instalador",
+      "descrip": "Instalación de sistemas de aire acondicionado domiciliario",
       "puntaje": "Instalaciones domiciliarias",
       "inicio": "2019",
       "fin": "2020",
@@ -108,7 +108,7 @@
       "inicio": "2014",
       "fin": "2017",
       "status": "Incompleto - Interrumpido",
-      "url": "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjziqGhquD2AhXiIbkGHeX7BiAQFnoECAQQAQ&url=http%3A%2F%2Fwww.pdvsa.com%2Findex.php%3Foption%3Dcom_content%26view%3Darticle%26id%3D8936%3Auniversidad-venezolana-de-los-hidrocarburos-dictara-maestria-en-gestion-de-datos-en-exploracion-y-produccion-de-petroleo%26catid%3D10%3Anoticias%26Itemid%3D5%26lang%3Des&usg=AOvVaw0VCBz_RS7069qWj4O4N0f8"
+      "url": "http://www.pdvsa.com/index.php?option=com_content&view=article&id=8907&Itemid=577&lang=es"
       },
       {
       "centro":"Universidad Tecnológica de La Habana - CUJAE",
@@ -132,7 +132,7 @@
       },
       
       {
-        "nombre": "Lenguajes de programación/Buen manejo de herramientas informáticas",
+        "nombre": "Manejo básico de IDE's, Lenguajes de programación y Framework: Django - Python, Agular CLI - JS, Apache Netbeans Springboot - Java, Front End Html - CSS -Js",
         "porcentaje": 30
       },
        
@@ -159,9 +159,9 @@
                         
     "proyecto": [
         {
-          "nombre": "Desarrollo Portfolio Web personal",
-          "descripcion": "Creación de Portfolio personal editable - Back end y Front end",
-          "url": "En desarrollo"
+          "nombre": "Desarrollo Front End - Base de Datos - Back End -  Portfolio Web personal - MiPortfolio",
+          "descripcion": "Creación de Portfolio personal editable - Back end y Front end con Angular CLI - MySQL WorkBench - Apache Netbeans",
+          "url": "https://ibrmiportfolioweb.web.app/"
         },
         {
           "nombre": "Electricista Matriculado - Servicios& Instalaciones",
@@ -179,7 +179,7 @@
           "url": "https://ilichb5.sg-host.com/project/15/"
         },
         {
-          "nombre": "WaflesSur Patagonia Web site",
+          "nombre": "WaflesSur® Patagonia Web site",
           "descripcion": "Creación de página Web Empresa Gastronómica WaflesSur® Patagonia - Río Negro /WordPress - Constructor DIVI",
           "url": "https://ilichb3.sg-host.com/"
         }
@@ -195,9 +195,9 @@
         "otrodato":"Cargo: Dueño de Empresa/empleador - Río Negro, Argentina"
       },
       {
-        "nombrecompleto": "Andrea Paola Reyes",
+        "nombrecompleto": "Andrea Paola Reyes Marín",
         "linkedin":"https://www.linkedin.com/in/andreapaolareyes",
-        "otrodato": "Ex compañera de trabajo en Petróleos de Venezuela - Venezuela"
+        "otrodato": "Ex compañera de trabajo en Petróleos de Venezuela - EEUU /  Venezuela"
       },
       {
         "nombrecompleto": "Jean Carlos Gómez",
