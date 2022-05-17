@@ -26,3 +26,10 @@ ul {
 .margenboton{
     margin-right: 70%;
 }
+.card-footer{
+    background-color: rgb(228, 232, 230);
+}
+.mat-card {
+text-align: center;
+;
+}

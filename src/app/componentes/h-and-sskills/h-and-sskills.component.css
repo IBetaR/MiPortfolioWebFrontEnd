@@ -8,3 +8,10 @@
 ul {
     list-style: none;
 }
+.card-footer{
+    background-color: rgb(228, 232, 230);
+}
+.mat-card {
+text-align: center;
+;
+}

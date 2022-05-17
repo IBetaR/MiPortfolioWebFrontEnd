@@ -11,12 +11,12 @@
     padding: 0px;
     padding-left: 5px;
     padding-right: 5px;
-    border: 1px solid #ddd;
-    border-radius: 16px;
-    max-width: 1950px;
+    border: 1px solid rgb(67, 67, 67);
+    border-radius: 12px;
+    max-width: auto;
     text-align: center;
     margin-top: 6px;
-    background-color: rgba(254, 254, 254, 0.61);
+    background-color: rgba(34, 177, 248, 0.301);
 }
 .card_img { 
     width: 200px;

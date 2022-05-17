@@ -9,7 +9,7 @@ https://ibrmiportfolioweb.web.app/
   
     <div class="modal-dialog">
       <div class="modal-content">
-        <h5 style="padding: 2%;">Datos personales del perfil</h5>
+        <h5 style="padding: 2%;">Datos personales del perfil<i class="fas fa-pencil-alt"></i></h5>
         
         <div class="modal-body">
           <form [formGroup]="acercaDeForm" (ngSubmit)="onSubmit()">
@@ -60,12 +60,12 @@ https://ibrmiportfolioweb.web.app/
   <div class="mat-card">
   <div class="container-sl">
     <div class="container-fluid" style="margin-top: 2%;">
-      <img src=""
+      <img src="#"
         style="margin-left: 15%;" class="img-fluid" alt="Banner personal">
   
   
       <div class="card">
-        <div class="card-header" style="border-radius: 2%;">
+        <div class="card-header" style="border-radius: 0%;">
           <div class="card_img">
             <img src="https://avatars.githubusercontent.com/u/94482314?v=4" alt="user-image">
   
@@ -74,9 +74,9 @@ https://ibrmiportfolioweb.web.app/
           <div class="card-body">
             
             <blockquote class="blockquote mb-0">
-              <h1 id="info-name">Ilich Betancourt Rangel</h1> <i class="fa fa-code" style="color: rgb(0, 0, 0); margin-left: 0%; background-color: rgb(255, 255, 255);
-              " aria-hidden="true"></i><i class="fa-solid fa-code"></i><i class="fa-regular fa-brackets-curly" style="background-color: black;"></i>
-              <p>Desarrollador Web Full Stack Jr.</p>
+              <h1 id="info-name">Ilich Betancourt Rangel </h1> <i class="fa fa-code" style="color: rgb(0, 0, 0); margin-left: 0%; background-color: rgb(255, 255, 255);
+              " aria-hidden="true"></i><i class="fa-regular fa-brackets-curly" style="background-color: black;"></i>
+              <p>Desarrollador Web Full Stack Jr. <i class="fas fa-laptop-code"></i></p>
               <footer class="blockquote-footer">#YoProgramo<cite title="Source Title">#Argentina
                   Programa</cite></footer>
                  
@@ -92,7 +92,7 @@ https://ibrmiportfolioweb.web.app/
               <div *ngIf="isUserLogged" class="btn-edit">
                 <button class="btn btn-secondary dropdown-toggle" type="button" 
               id="dropdownMenu2" data-bs-toggle="dropdown" (click)="onNuevoAcercaDe()" aria-expanded="false">
-                Acciones del campo
+                Acciones del campo <i class="fas fa-pencil-alt"></i>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                 <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
