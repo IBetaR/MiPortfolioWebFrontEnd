@@ -1,0 +1,113 @@
+
+  <!--Componente listo/cargar en proyecto definitivo-->
+<div id="referencia">
+      <!-- Modal -->
+  <div class="modal fade" id="ModalRef" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <h5 style="padding: 2%;">Referencias Personales/Profesionales</h5>
+            <div class="modal-body; w3-container w3-card-4 w3-light-grey">
+              <form [formGroup]="referenciaForm" (ngSubmit)="onSubmit()"><!---->
+                <input type="hidden" name="id" formControlName="id">
+
+                    <div class="modal-header">
+                      <label for="nombrecompleto"><h6>Nombre(s) y Apelldido(s)</h6></label>
+                        
+                        <input type="text" name="nombrecompleto" formControlName="nombrecompleto" 
+                        class="form-control" required style="width: 70%">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+
+
+                    <div class="modal-header">
+                      <label for="linkedin"><h6>Ingrese LinkedIn - Instagram - Otro (URL)</h6></label>
+                        
+                        <input type="text" name="linkedin" formControlName="linkedin"
+                         class="form-control" required style="width: 70%">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+
+                      <div class="modal-header">
+                        <label for="otrodato"><h6>Datos Adicionales (Ej: Teléfono, email)</h6></label>
+                          
+                          <input type="text" name="otrodato" formControlName="otrodato"
+                           class="form-control" required style="width: 70%">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
+                    </div>
+             </form>
+           </div>
+          </div>
+        </div>
+  </div>
+
+<!--Modif-->
+<div class="mat-card">
+  <div style="margin-top: 1%; margin-bottom: 1%; width: max-width; ">
+          <h2 style="margin-bottom: 0%; background-color: rgba(100, 177, 245, 0.463);"
+              class="card-header">
+              Referencias personales - Profesionales
+              <div *ngIf="isUserLogged" class="data-control">
+                <div class="dropdown" style="margin: auto; width: fit-content; margin-top: 0%;">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                   Acciones del campo <i class="fas fa-pencil-alt"></i>
+                  </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                      <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+                      data-bs-target="#ModalRef" (click)="onNuevaReferencia()">
+                      Crear</button></li>
+                  </ul>
+                </div>
+              </div>
+          </h2>
+  </div>
+    
+    <div>
+      <ul class="items-list" id="referenciaList">
+        <li *ngFor="let referencia of referenciaList let i = index">
+          <div class="cajaP">
+    
+                <div class="card" style="width: 50%;height: 7em; margin-top: 1%; margin-bottom: 1%; margin-left: -1%;">
+                                
+                      <div class="card-header">
+                          <h6>{{referencia.nombrecompleto}}</h6>
+                      </div>
+                      <ul class="list-group list-group-flush" style="margin-top: 0.5em; margin-right: 70%; margin-left: 2%;">
+                          <a href="{{referencia.linkedin}}" style="margin-left: 1%;" class="btn btn-primary">Ir a referencia</a> 
+                      </ul>
+                </div>
+              
+                <div class="card" style="width: 50%;height: 7em; margin-top: 1%; margin-bottom: 1%; margin-left: 1%;">
+                            
+                    <div class="card-header">
+                      <h5 class="card-title">{{referencia.otrodato}}</h5>
+                    </div>
+                    <div *ngIf="isUserLogged" class="data-control">
+
+                        <div class="dropdown"  style="margin: auto; width: fit-content; margin-top: 0%;">
+                          <button class="btn btn-secondary dropdown-toggle" style="margin-top: 0.5em; margin-right: 190%; margin-left: 2%;" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                            Acciones del campo <i class="fas fa-pencil-alt"></i>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+
+                              <li><button class="dropdown-item" type="button"data-bs-toggle="modal"
+                                (click)="onEditarReferencia(i)" data-bs-target="#ModalRef">Modificar</button></li>
+                              <li><button class="dropdown-item" (click)="onBorrarReferencia(i)" type="button">Eliminar</button></li>
+
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>

@@ -1,0 +1,155 @@
+<div id="idioma">
+    <!-- Modal -->
+    <div class="modal fade" id="ModalIdio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog" style="width: 100em;">
+          <div class="modal-content">
+            <h5 style="padding: 2%;">Idiomas</h5>
+            <div class="modal-body modal-body; w3-container w3-card-4 w3-light-grey">
+              <form [formGroup]="idiomasForm" (ngSubmit)="onSubmit()"><!---->
+                <input type="hidden" name="id" formControlName="id">
+      
+                    <div class="modal-header">
+                      <label for="idioma"><h6>Idioma</h6></label>
+                        
+                        <input type="text" name="idioma" formControlName="idioma" 
+                        class="form-control" required style="width: 70%">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                      <div class="modal-header">
+                        <label for="nivel"><h6>Nivel</h6></label>
+                          
+                          <input type="text" name="nivel" formControlName="nivel"
+                          class="form-control" required style="width: 70%">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+      
+      
+                    <div class="modal-header">
+                      <label for="habla"><h6>Habla - Porcetaje estimado de Dominio</h6></label>
+                        
+                        <input type="number" name="habla" formControlName="habla"
+                        class="form-control" required style="width: 70%">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-header">
+                        <label for="lee"><h6>Lee - Porcetaje estimado de Dominio</h6></label>
+                          
+                          <input type="number" name="lee" formControlName="lee"
+                          class="form-control" required style="width: 70%">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-header">
+                        <label for="escribe"><h6>Escribe - Porcetaje estimado de Dominio</h6></label>
+                            
+                          <input type="number" name="escribe" formControlName="escribe"
+                          class="form-control" required style="width: 70%">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+      
+      
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
+                    </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<header>
+    <div class="mat-card">
+      <div class="card" style="margin-top: 1%; margin-bottom: 1%;">
+        <h2 style="margin-bottom: 1%; background-color: rgba(100, 177, 245, 0.463);" class="card-header">
+          Idiomas 
+          <div *ngIf="isUserLogged" class="data-control">
+            <div class="dropdown" style="margin: auto; width: fit-content; margin-top: 0%;">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+              Acciones del campo <i class="fas fa-pencil-alt"></i>
+            </button> 
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+                  data-bs-target="#ModalIdio" (click)="onNuevaIdioma()">
+                  Crear</button></li>
+                
+              </ul>
+          </div>
+        </div>
+
+        
+        </h2>
+
+        <body class="mat-card"  id="hass">
+          <section>
+
+
+            <div class="container-fluid">
+              <ul class="items-list" id="hassList">
+                <li *ngFor="let idioma of idiomasList let i = index">
+
+
+                  <div class="card" style="width: auto;">
+                    <div class="card-body" style="width: 30 em;"> 
+                      <h5 class="card-title">{{idioma.idioma}}</h5><h5><label for="progress">Nivel {{idioma.nivel}}</label></h5>
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 48%;" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <label style="background-color: rgb(107, 206, 65)" for="progress">Habla {{idioma.habla}}</label>
+                      </div>
+                      <br>
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 85%;" aria-valuenow="100"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <label style="background-color: rgb(81, 153, 236)" for="progress">Lee {{idioma.lee}}</label>
+                      </div>
+                      <br>
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 65%;" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <label style="background-color: rgb(206, 65, 192)" for="progress">Escribe {{idioma.escribe}}</label>
+                      </div>
+
+                      
+                      <div *ngIf="isUserLogged" class="data-control">
+
+                        <div class="dropdown" style=" width: fit-content; margin-top: -2.5%; margin-left: 76.5%;">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" style="margin-left: -52%; margin-bottom: 2%;" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                            Acciones del campo <i class="fas fa-pencil-alt"></i>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                              
+                            <li><button class="dropdown-item" type="button"data-bs-toggle="modal"
+                              (click)="onEditIdioma(i)" data-bs-target="#ModalIdio">
+                              Modificar</button>
+                            </li>
+                            <li><button class="dropdown-item" (click)="onDeleteIdioma(i)" type="button">
+                              Eliminar</button>
+                            </li>
+                          </ul>
+                      </div>
+                    </div>
+
+
+                      
+
+
+
+
+                    </div>
+                  </div>
+
+
+                </li>
+              </ul>
+            </div>
+
+
+          </section>
+
+        </body>
+      </div>
+    </div>
+    
+</header>
+</div>

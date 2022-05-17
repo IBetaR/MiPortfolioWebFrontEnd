@@ -1,0 +1,208 @@
+<!--Componente listo/cargar en proyecto definitivo-->
+<div id="experiencia">
+    <!-- Modal -->
+    <div class="modal fade" id="ModalExp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <h5 style="padding: 2%;">Experiencia Laboral</h5>
+          <div class="modal-body; w3-container w3-card-4 w3-light-grey">
+            <form [formGroup]="experienciaForm" (ngSubmit)="onSubmit()"><!---->
+              <input type="hidden" name="id" formControlName="id">
+              
+              
+              <div class="modal-header">
+                <label for="cargo"><h6>Cargo desempeñado</h6></label>
+                  
+                  <input type="text" name="cargo" formControlName="cargo" 
+                  class="form-control" required style="width: 70%">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="modal-header">
+                <label for="empresa"><h6>Empresa - Institución</h6></label>
+                  
+                  <input type="text" name="empresa" formControlName="empresa" 
+                  class="form-control" required style="width: 70%">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="modal-header">
+                <label for="descrip"><h6>Descripción de principales funciones</h6></label>
+                  
+                  <input type="text" name="descrip" formControlName="descrip" 
+                  class="form-control" required style="width: 70%">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="modal-header">
+                <label for="img"><h6>Logo de la Empresa/Institución</h6></label>
+                  
+                  <input type="text" name="img" formControlName="img" 
+                  class="form-control" required style="width: 70%">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="modal-header">
+                <label for="modalidad"><h6>Modalidad de Trabajo (Ej: Full time)</h6></label>
+                  
+                  <input type="text" name="modalidad" formControlName="modalidad" 
+                  class="form-control" required style="width: 70%">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="modal-header">
+                <label for="inicio"><h6>Fecha de inicio</h6></label>
+                  
+                <input type="date" name="inicio" formControlName="inicio" 
+                class="form-control" required style="width: 70%">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-header">
+                <label for="fin"><h6>Fecha de finalización</h6></label>
+                  
+                <input type="date" name="fin" formControlName="fin" 
+                class="form-control" required style="width: 70%">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+   
+  
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary"data-bs-dismiss="modal">Guardar</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<div class="mat-card">
+    <div style="margin-top: 1%; margin-bottom: 1%;">
+          
+        <h2 style="margin-bottom: 2%; background-color: rgba(100, 177, 245, 0.463);"
+         class="card-header">
+         Experiencia Laboral
+         <div *ngIf="isUserLogged" class="data-control">
+         <div class="dropdown" style="margin: auto; width: fit-content; margin-top: 0%;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+            Acciones del campo <i class="fas fa-pencil-alt"></i>
+          </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li><button class="dropdown-item" type="button" (click)="onNuevaExperiencia()" data-bs-toggle="modal"
+                data-bs-target="#ModalExp">Crear</button></li>
+              
+            </ul>
+        </div>
+      </div>
+
+        
+        </h2>
+  </div>
+      <div class="mat-card" >
+        <div class="container-fluid">
+          <ul class="items-list" id="experienciaList">
+            <li *ngFor="let experiencia of experienciaList; let i = index">
+  
+              <div class="row row-cols-1 row-cols-md-3 g-4" style="border-radius: 10%;">
+                
+                <div class="col">
+                  <div class="card h-100" style="border-radius: 0%; border-color: rgb(255, 255, 255); margin-top: 0%;margin-left: -18%; padding:25%;  ">
+                    <img [src]="experiencia.img" class="card-img-top" alt="Logo Empresa/Institución">
+                    <ul class="list-group list-group-flush" style="margin-top: 0.5em; margin-right: 70%; margin-left: 2%; width: 20em;">
+                      
+                  </ul>
+                  </div>
+                </div>
+  
+                        <div class="col">
+                          <div class="card h-100" style="margin-inline-start: -10%; border-color: white; width: 60em;">
+                            <div class="card-body" style="padding: 0%;">
+                              <i class="fas fa-briefcase"></i>
+                              <h3 class="card-title">{{experiencia.empresa}}</h3>
+                            </div>
+                          
+                            <div class="card-body" style="padding: 0%; margin-top: 1%;  margin-left: 0%;">
+                              <h4 class="card-title">{{experiencia.cargo}}</h4>
+                              <p class="texto-justificado">{{experiencia.descrip}}</p>
+  
+                              <div class="card-footer" style="margin: auto; width: fit-content;">
+                                <small style="margin: auto;" class="text-muted"><label for="inicio"></label>
+                                  {{experiencia.inicio}}
+                                </small>
+                                <span>
+                                    - 
+                                </span>
+                                <small class="text-muted"><label for="fin"></label>
+                                  {{experiencia.fin}}
+                                </small>
+                            </div>
+                            <div class="col">
+                              <div class="card h-100" style="border-color: rgb(255, 255, 255); height: 5%;">
+                                <div class="card-body" style="padding: 10%;">
+      
+                                </div>
+                                <div class="card-body" style="padding: 10%;margin-top: -25%;">
+                                  <h6 class="text-muted">Modalidad:</h6>
+                                  <div class="card-footer" style="margin-left: 5%;">
+                                    <small style="margin-left: 10%;" class="text-muted">{{experiencia.modalidad}}</small>
+                                  </div>
+                                  
+                                </div>
+                              <div *ngIf="isUserLogged" class="data-control">
+    
+                                        <div class="dropdown" style="margin: auto; width: fit-content; margin-top: -9%; margin-bottom: 1%;">
+                                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Acciones del campo <i class="fas fa-pencil-alt"></i>
+                                          </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                              
+                                              <li><button class="dropdown-item" type="button"data-bs-toggle="modal"
+                                                (click)="onEditarExperiencia(i)" data-bs-target="#ModalExp">
+                                                Modificar<i class="fas fa-tools"></i></button></li>
+                                              <li><button class="dropdown-item" (click)="onBorrarExperiencia(i)" type="button">
+                                                Eliminar <i class="fas fa-trash-alt"></i></button></li>
+                                            </ul>
+                                        </div>
+                              </div>        
+                              </div>
+                            </div>
+
+                                  
+                                  
+                            </div>
+  
+                          </div>
+                        </div>
+                        
+              </div>
+            </li>
+          </ul>
+        
+
+        </div>
+      
+    
+  </div>
+</div>
+
+  <!--Modif-->
+
+  <!--<div style="margin-top: 1%; margin-bottom: 1%; width: max-width; ">
+    <h5 style="margin-bottom: 0%; background-color: rgba(100, 177, 245, 0.463);"
+        class="card-header">
+        Referencias personales - Profesionales
+        <div *ngIf="isUserLogged" class="data-control">
+          <div class="dropdown" style="margin: auto; width: fit-content; margin-top: 0%;">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+             Acciones del campo
+            </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+                data-bs-target="#ModalExp" (click)="onNuevaExperiencia()">
+                Crear</button></li>
+            </ul>
+          </div>
+        </div>
+    </h5>
+</div>-->

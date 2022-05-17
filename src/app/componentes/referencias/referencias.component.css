@@ -1,0 +1,35 @@
+.button{
+    border-radius:5rem;
+    box-shadow: inset;
+    background-color: red;
+
+}
+
+ul {
+    list-style: none;
+}
+
+.texto-justificado{
+    
+    text-align: justify;
+    }
+
+.cajaP {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    width: auto;
+    margin: 5px;
+    
+    }
+.margenboton{
+    margin-right: 70%;
+}
+.card-footer{
+    background-color: rgb(228, 232, 230);
+}
+.mat-card {
+text-align: center;
+;
+}

@@ -1,0 +1,109 @@
+<!-- Modal -->
+<div class="modal fade" id="ModalHass" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <h5 style="padding: 2%;">Habilidades para destacar</h5>
+      
+      <div class="modal-body modal-body; w3-container w3-card-4 w3-light-grey">
+
+        <form [formGroup]="hassForm" (ngSubmit)="onSubmit()"><!---->
+          <input type="hidden" name="id" formControlName="id">
+
+
+              <div class="modal-header">
+                <label for="nombrecompleto"><h6>Habilidad</h6></label>
+                  
+                  <input type="text" name="nombre" formControlName="nombre" 
+                  class="form-control" required style="width: 70%">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+
+              <div class="modal-header">
+                <label for="porcentaje"><h6>Porcetaje estima de Dominio</h6></label>
+                  
+                  <input type="text" name="porcentaje" formControlName="porcentaje"
+                   class="form-control" required style="width: 70%">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
+              </div>
+       </form>
+
+    </div>
+  </div>
+</div>
+</div>
+
+        
+          <div class="mat-card">
+            <div class="card" style="margin-top: 1%; margin-bottom: 1%;">
+              <h2 style="margin-bottom: 1%; background-color: rgba(100, 177, 245, 0.463);" class="card-header">Habilidades Hard
+                and Soft
+                <div *ngIf="isUserLogged" class="data-control">
+                  <div class="dropdown" style="margin: auto; width: fit-content; margin-top: 0%;">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                    Acciones del campo <i class="fas fa-pencil-alt"></i>
+                  </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                      <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+                        data-bs-target="#ModalHass" (click)="onNuevaHaSs()">
+                        Crear</button></li>
+                      
+                    </ul>
+                </div>
+              </div>
+              
+              </h2>
+
+              <body class="mat-card" style="border-color: rgb(209, 141, 141);" id="hass">
+                <section>
+
+                  <div class="container-fluid">
+                    <ul class="items-list" id="hassList">
+                      <li *ngFor="let habilidad of hassList let i = index">
+
+
+                          <div class="card" style="width: auto; margin-left: 0%;">
+                            <div class="card-body" style="width: 30 em; margin-left: 1%;">
+
+                              <h5 class="card-title">{{habilidad.nombre}}</h5>
+
+                              <div class="progress-bar bg-success" role="progressbar" style="width: 50%;" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100">
+
+                                <label style="background-color: rgb(67, 220, 141)" for="progress">Dominio {{habilidad.porcentaje}} %</label>
+
+                              </div>
+                              
+                              <div *ngIf="isUserLogged" class="data-control">
+
+                                <div class="dropdown" style="margin: auto; width: fit-content; margin-top: 1%; margin-right: 10%;">
+                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Acciones del campo <i class="fas fa-pencil-alt"></i>
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                      
+                                    <li><button class="dropdown-item" type="button"data-bs-toggle="modal"
+                                      (click)="onEditHaSs(i)" data-bs-target="#ModalHass">
+                                      Modificar</button>
+                                    </li>
+                                    <li><button class="dropdown-item" (click)="onDeleteHaSs(i)" type="button">
+                                      Eliminar</button>
+                                    </li>
+                                  </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+              </body>
+            </div>
+          </div>

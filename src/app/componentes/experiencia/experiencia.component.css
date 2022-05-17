@@ -1,0 +1,22 @@
+.container {
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(132, 130, 130);
+    padding: 55px;
+
+}
+ul {
+    list-style: none;
+}
+
+.texto-justificado{
+    text-align: justify;
+    }
+    .card-footer{
+        background-color: rgb(228, 232, 230);
+    }
+.mat-card {
+    text-align: center;
+    ;
+}
+

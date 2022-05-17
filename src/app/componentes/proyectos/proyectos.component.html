@@ -1,0 +1,116 @@
+<div id="proyecto">
+  <!--Componente listo/cargar en proyecto definitivo-->
+    <!-- Modal -->
+    <div class="modal fade" id="ModalProy" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <h5 style="padding: 2%;">Proyectos/Profesionales</h5>
+          <div class="modal-bodymodal-body; w3-container w3-card-4 w3-light-grey">
+            <form [formGroup]="proyectosForm" (ngSubmit)="onSubmit()"><!---->
+              <input type="hidden" name="id" formControlName="id">
+
+                  <div class="modal-header">
+                    <label for="nombre"><h6>Nombre/Título del Proyecto</h6></label>
+                      
+                      <input type="text" name="nombre" formControlName="nombre" 
+                      class="form-control" required style="width: 70%">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+
+                  <div class="modal-header">
+                    <label for="descripcion"><h6>Resumen del proyecto</h6></label>
+                      
+                      <input type="text" name="descripcion" formControlName="descripcion"
+                       class="form-control" required style="width: 70%">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-header">
+                      <label for="url"><h6>Link de enlace al Proyecto (URL)</h6></label>
+                        
+                        <input type="text" name="url" formControlName="url"
+                         class="form-control" required style="width: 70%">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
+                  </div>
+           </form>
+         </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<div class="mat-card">
+<div style="margin-top: 1%; margin-bottom: 1%; width: max-width; ">
+  <h2 style="margin-bottom: 0%; background-color: rgba(100, 177, 245, 0.463);"
+      class="card-header">
+      Proyectos  Desarrollados
+      <div *ngIf="isUserLogged" class="data-control">
+        <div class="dropdown" style="margin: auto; width: fit-content; margin-top: 0%;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+           Acciones del campo <i class="fas fa-pencil-alt"></i>
+          </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+              data-bs-target="#ModalProy" (click)="onNuevoProyecto()">
+              Crear</button></li>
+          </ul>
+        </div>
+      </div>
+  </h2>
+</div>
+
+<div>
+  <ul class="items-list" id="referenciaList">
+    <li *ngFor="let proyecto of proyectosList let i = index">
+
+      <div class="cajaP">
+
+        <div class="card" style="width: 50%;height: 9em; margin-top: 1%; margin-bottom: 1%; margin-left: -1%; margin-right: 2%;">
+          <div class="card-header">
+            <h6>{{proyecto.nombre}}</h6>
+          </div>
+          <ul class="list-group list-group-flush" style="margin-top: 0.5em; margin-right: 70%; margin-left: 2%;">
+            <a href="{{proyecto.url}}" style="margin-left: 1%; margin-top: auto; margin-bottom: auto;" class="btn btn-primary">Sitio Web</a> 
+          </ul>
+        </div>
+
+        <div class="card" style="width: 50%;height: 9em; margin-top: 1%; margin-bottom: 1%; margin-left: -1%;">
+          <div class="card-header">
+            <h6>Descripción - Otros Datos</h6>
+          </div>
+          
+          <p class="card-text" style="margin-left: 2%; margin-top: 1%"> {{proyecto.descripcion}}</p>
+                  <div *ngIf="isUserLogged" class="data-control">
+
+                    <div class="dropdown" style="margin: auto; margin-top: 0%;">
+                      <button class="btn btn-secondary dropdown-toggle" style="margin-left: 38%; margin-top: -1%" type="button"  id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                        Acciones del campo <i class="fas fa-pencil-alt"></i>
+                      </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                          
+                          <li><button class="dropdown-item" type="button"data-bs-toggle="modal"
+                            (click)="onEditarProyecto(i)" data-bs-target="#ModalProy">Modificar</button></li>
+                          <li><button class="dropdown-item" (click)="onBorrarProyecto(i)" type="button">Eliminar</button></li>
+                        </ul>
+                    </div>
+                  </div>
+         
+          
+          
+        </div>
+
+
+      </div>
+    </li>
+  </ul>
+</div>
+</div>

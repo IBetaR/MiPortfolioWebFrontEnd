@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+.modal{
+width: 100em;
+
+}
+
+.modal-content{
+    background-color: rgb(104, 205, 239);
+}

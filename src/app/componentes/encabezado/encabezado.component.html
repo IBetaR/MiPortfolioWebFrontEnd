@@ -1,0 +1,62 @@
+<header id="encabezado">
+    <div id="encabezado"> <!--Encabezado Listo -->
+  
+        <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+          <li *ngFor="let encabezado of encabezado"></li>
+      
+          <i class="fa fa-code" style="color: rgb(100, 159, 243); margin-left: 2%; background-color: rgb(35, 35, 35);
+          " aria-hidden="true"></i><a class="navbar-brand" style="margin-left: 2%;"
+           href="https://www.argentina.gob.ar/produccion/argentina-programa/segunda-etapa"
+           >{{encabezado.titulo}}</a> <i class="fa-regular fa-brackets-curly"></i>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 35%;">
+            <ul class="navbar-nav mr-auto">
+          
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light">
+                  <i class="grey-text fab fa-instagram fa-2x"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light" href="{{encabezado.linkedin}}">
+                  <i class="grey-text fab fa-linkedin fa-2x"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light" href="{{encabezado.github}}">
+                  <i class="grey-text fab fa-github-square fa-2x"></i>
+                  
+                </a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link waves-effect waves-light" routerLink="/iniciar-session">
+                  <!--<div *ngIf="isUserLogged" class="data-control"></div>-->
+                <form class="form-inline my-2 my-lg-0">
+                  <button class="btn btn-primary btn-sm"  style="background-color: rgb(31, 222, 178); margin-right: 0%; border: rgb(249, 247, 247);" routerLink="/iniciar-session">Iniciar Sesión <i class="fas fa-sign-in-alt"></i></button>
+            
+                </form>
+        
+              </a>
+              
+              </li>
+              <li>
+                <a href="">
+                  <form class="form-inline my-2 my-lg-0">
+                    <button class="btn btn-primary btn-sm" style="background-color: rgba(249, 42, 42, 0.708); border: rgb(249, 247, 247); margin-top: 8%;" (click)="logout()" routerLink="/portfolio">Cerrar Sesión <i class="fas fa-sign-out-alt"></i></button>
+              
+                  </form>
+                </a>
+              </li>
+            </ul>
+            
+        
+        
+          </div>
+        </nav>
+        
+      
+       
+         
+      </div>
+
+</header>
