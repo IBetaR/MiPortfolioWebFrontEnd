@@ -100,7 +100,7 @@
 
   <div class="mat-card">
     <div class="card" style="margin-top: 1%; margin-bottom: 1%;">
-      <h2 style="margin-bottom: 2%; background-color: rgba(100, 177, 245, 0.463);"
+      <h2 style="margin-bottom: 2%; "
        class="card-header">Educación
        <div *ngIf="isUserLogged" class="data-control">
        <div class="dropdown" style="margin: auto; width: fit-content; margin-top: 0%;">
@@ -119,81 +119,85 @@
       
       </h2>
 
+
+      
     <div class="mat-card">
       <div class="container-fluid" style="background-color: rgb(255, 255, 255); border-color: rgb(255, 254, 254); margin-bottom: -5%; margin-top: -1%;">
-        <ul class="items-list" id="experienciaList">
-          <li *ngFor="let educacion of educacionList; let i = index">
+        <div class="row" style="width: auto;">
+              <ul class="items-list" id="experienciaList">
+                <li *ngFor="let educacion of educacionList; let i = index">
 
-            <div class="row row-cols-1 row-cols-md-3 g-4" style="border-radius: 10%;  ">
-              
-                      <div class="col" style="margin-left:2%">
-                        <div class="card h-100" style="border-radius: 0%; border-color: rgb(255, 255, 255); margin-top: 0%;margin-left: -18%; padding:25%; ">
-                          <img [src]="educacion.img" class="card-img-top" alt="Logo Centro Educativo">
-                          <ul class="list-group list-group-flush" style="margin-top: 0.5em; margin-right: 70%; margin-left: 2%; width: 20em;">
-                            <a href="{{educacion.url}}" id="irA" style="margin-left: 1%;" class="btn btn-primary">Sitio Web <i class="fas fa-link"></i></a> 
-                        </ul>
-                        </div>
-                      </div>
-
-                      <div class="col" >
-                        <div class="card h-100" style="margin-inline-start: -8%; border-color: rgb(255, 255, 255);width: 65em;">
-                          <div class="card-body" style="padding: 0%; ">
-                            <i style="margin-left:0%" class="fas fa-graduation-cap"></i>
-                            <h3 class="card-title">{{educacion.centro}}</h3>
-                          </div>
-                        
-                          <div class="card-body" style="padding: 10%; margin-top: -8%;">
-                            <h4 class="card-title" >{{educacion.titulo}}</h4>
-                            <p class="texto-justificado">{{educacion.descrip}}</p>
-
-                            <div class="card-footer" style="margin: auto; width: fit-content;">
-                              <small style="margin: auto;" class="text-muted"><label for="inicio"></label>
-                                {{educacion.inicio}}
-                              </small>
-                              <span>
-                                  - 
-                              </span>
-                              <small class="text-muted"><label for="fin"></label>
-                                {{educacion.fin}}
-                              </small>
-                              
-                          </div>
-                          
-                          <div class="card-body" style="padding: 10%;margin-top: 0%; ">
-                            <h6 class="text-muted">Status de Educación</h6>
-                            <div class="card-footer" style="margin-left: 5%; margin-bottom: 40%;">
-                              <small style="margin-left: 10%;" class="text-muted">{{educacion.status}}</small>
-                            </div>
-                            <div *ngIf="isUserLogged" class="data-control">
-
-                              <div class="dropdown" style="margin: auto; width: fit-content; margin-top: -30%;">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                                  Acciones del campo <i class="fas fa-pencil-alt"></i>
-                                </button>
-                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                    
-                                    <li><button style="background-color: rgb(120, 217, 255);" class="dropdown-item" type="button"data-bs-toggle="modal"
-                                      (click)="onEditarEducacion(i)" data-bs-target="#ModalEdu">Modificar <i class="fas fa-tools"></i></button></li>
-                                    <li><button style="background-color: rgb(226, 109, 109);" class="dropdown-item" (click)="onBorrarEducacion(i)" type="button">Eliminar <i class="fas fa-trash-alt"></i></button></li>
-                                  </ul>
+                  <div class="row" style="border-radius: 0%; height: 31em; ">
+                    
+                            <div class="col" style="margin-left:2%;  ">
+                              <div class="col1" style="border-radius: 0%; border-color: rgb(255, 255, 255); margin-top: -15%;margin-left: -18%; padding:30%; ">
+                                <img [src]="educacion.img" id="imgEd" class="card-img-top" alt="Logo Centro Educativo">
+                                <ul class="list-group list-group-flush" style="margin-top: 0.5em; margin-right: 70%; margin-left: 2%; width: 20em;">
+                                  <a href="{{educacion.url}}" id="irA" style="margin-left: 1%;" class="btn btn-primary">Sitio Web <i class="fas fa-link"></i></a> 
+                              </ul>
                               </div>
-                    </div> 
-                          </div>
+                            </div>
 
+                            <div class="col" >
+                              <div class="card2" style="margin-inline-start: -8%; border-color: rgb(255, 255, 255);width: 65em;">
+                                <div class="card-body" style="padding: 0%; ">
+                                  <i style="margin-left:0%" class="fas fa-graduation-cap"></i>
+                                  <h3 class="card-title">{{educacion.centro}}</h3>
+                                </div>
                               
-                          </div>
+                                <div class="card-body" style="padding: 10%; margin-top: -8%;">
+                                  <h4 class="card-title" >{{educacion.titulo}}</h4>
+                                  <p class="texto-justificado">{{educacion.descrip}}</p>
 
-                        </div>
-                      </div>
-                      
-            </div>
-          </li>
-        </ul>
+                                  <div class="card-footer" style="margin: auto; width: fit-content;">
+                                    <small style="margin: auto;" class="text-muted"><label for="inicio"></label>
+                                      {{educacion.inicio}}
+                                    </small>
+                                    <span>
+                                        - 
+                                    </span>
+                                    <small class="text-muted"><label for="fin"></label>
+                                      {{educacion.fin}}
+                                    </small>
+                                    
+                                </div>
+                                
+                                <div class="card-body" style="padding: 10%;margin-top: -10%; ">
+                                  <h6 class="text-muted">Status de Educación</h6>
+                                  <div class="card-footer" style="margin-left: 5%; margin-bottom: 40%;">
+                                    <small style="margin-left: 10%;" class="text-muted">{{educacion.status}}</small>
+                                  </div>
+                                  <div *ngIf="isUserLogged" class="data-control">
+
+                                    <div class="dropdown" style="margin: auto; width: fit-content; margin-top: -38%;">
+                                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Acciones del campo <i class="fas fa-pencil-alt"></i>
+                                      </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                          
+                                          <li><button style="background-color: rgb(120, 217, 255);" class="dropdown-item" type="button"data-bs-toggle="modal"
+                                            (click)="onEditarEducacion(i)" data-bs-target="#ModalEdu">Modificar <i class="fas fa-tools"></i></button></li>
+                                          <li><button style="background-color: rgb(226, 109, 109);" class="dropdown-item" (click)="onBorrarEducacion(i)" type="button">Eliminar <i class="fas fa-trash-alt"></i></button></li>
+                                        </ul>
+                                    </div>
+                          </div> 
+                                </div>
+
+                                    
+                                </div>
+
+                              </div>
+                            </div>
+                            
+                  </div>
+                </li>
+              </ul>
         
 
 
 
       </div>
+    </div>
     </div>
     </div>
   </div>

@@ -12,11 +12,19 @@ ul {
 .texto-justificado{
     text-align: justify;
     }
-    .card-footer{
-        background-color: rgb(228, 232, 230);
-    }
+.card-footer{
+    background-color: rgb(228, 232, 230);
+}
 .mat-card {
     text-align: center;
-    ;
+    
 }
+.card-header{
+    background: linear-gradient(to bottom,rgb(88, 218, 244), white)
+}
+
+.row{
+    background: linear-gradient(to bottom,rgb(88, 218, 244), white)
+}
+
 

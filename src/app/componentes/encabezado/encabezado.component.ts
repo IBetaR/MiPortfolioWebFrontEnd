@@ -11,6 +11,9 @@ export class EncabezadoComponent implements OnInit {
   encabezado:any;
   //encabezado ='encabezado';
   //miPortfolio: any;
+  isUserLogged:Boolean = true;
+  isUserLogged1: Boolean= true;
+  
 
   constructor(
     
@@ -27,6 +30,10 @@ export class EncabezadoComponent implements OnInit {
     
     this.ruta.navigate(['/iniciar-session']);
     sessionStorage.removeItem("usuario");
+  }
+
+  public Esconderboton(){
+    this.isUserLogged
   }
 
 
