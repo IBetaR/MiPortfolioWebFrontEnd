@@ -28,17 +28,20 @@
                   
                 </a>
               </li>
+              <div *ngIf="isUserLogged" class="data-control">
+
               <li class="nav-item" >
                 <a class="nav-link waves-effect waves-light" routerLink="/iniciar-session">
-                  <!--<div *ngIf="isUserLogged" class="data-control"></div>-->
                 <form class="form-inline my-2 my-lg-0">
-                  <button class="btn btn-primary btn-sm"  style="background-color: rgb(31, 222, 178); margin-right: 0%; border: rgb(249, 247, 247);" routerLink="/iniciar-session">Iniciar Sesión <i class="fas fa-sign-in-alt"></i></button>
-            
+                  <button class="btn btn-primary btn-sm"  style="background-color: linear-gradient(to bottom,rgb(88, 218, 244), white); margin-right: 0%; border: rgb(249, 247, 247);" routerLink="/iniciar-session">Iniciar Sesión <i class="fas fa-sign-in-alt"></i></button>
                 </form>
-        
               </a>
-              
               </li>
+
+            </div>
+
+              <div *ngIf="isUserLogged1" class="data-control">
+
               <li>
                 <a href="">
                   <form class="form-inline my-2 my-lg-0">
@@ -47,6 +50,8 @@
                   </form>
                 </a>
               </li>
+
+            </div>
             </ul>
             
         

@@ -33,3 +33,9 @@ ul {
 text-align: center;
 ;
 }
+.card-header{
+    background: linear-gradient(to bottom,rgb(88, 218, 244), white)
+}
+.card-header1{
+    background: linear-gradient(to bottom,rgba(148, 166, 146, 0.389), white)
+}
