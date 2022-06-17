@@ -56,6 +56,17 @@
     "educacion":[
 
       {
+        "centro":"Gobierno del Chaco - Polo IT Chaco - UTN-FRRe y la UNCAUS",
+        "titulo": "Especialización en tecnologías de desarrollo",
+        "img": "https://empleo.chaco.gob.ar/static/media/logoCapHeaderv2.2fe2a41f.png",
+        "descrip": "Desarrollo Web con JAVA: Introducción al desarrollo web con JAVA. Spring Framework/Spring Boot. Spring Data. Front end con React JS Introducción a React JS. Desarrollar con React JS. Componentes. Manejo de datos vía API. UI Components y Container Components. Herramientas de Testing para desarrollo: Calidad en el contexto del desarrollo de software. Principios del testing. Niveles y tipos de testing. Casos de prueba. Técnicas: predicción de errores, “fault attack”, testing exploratorio. Reporte de seguimientos. Testing unitario. TDD (Test Driven Development)",
+        "puntaje": "Cursando",
+        "inicio": "Mayo 2022",
+        "fin": "Agosto 2022",
+        "status": "Cursando actualmente",
+        "url": "https://empleo.chaco.gob.ar/capacitaciones/Especializaci%C3%B3n-en-tecnolog%C3%ADas-de-desarrollo"
+      },
+      {
       "centro":"Ministerio de Desarrollo Productivo, la Cámara de la Industria Argentina del Software (CESSI) y el Instituto Nacional de Tecnología Industrial (INTI)",
       "titulo": "Desarrollador Web Full Stack Jr.",
       "img": "https://argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/sliderimage1/1645588080/Banner4.png",
@@ -132,7 +143,7 @@
       },
       
       {
-        "nombre": "Manejo básico de IDE's, Lenguajes de programación y Framework: Django - Python, Agular CLI - JS, Apache Netbeans Springboot - Java, Front End Html - CSS -Js",
+        "nombre": "Manejo básico de IDE's, Lenguajes de programación y Frameworks: Django - Python, Agular CLI - JS, Apache Netbeans Springboot - Java, Front End Html - CSS -Js",
         "porcentaje": 30
       },
        
