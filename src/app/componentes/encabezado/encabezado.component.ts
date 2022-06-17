@@ -30,11 +30,21 @@ export class EncabezadoComponent implements OnInit {
     
     this.ruta.navigate(['/iniciar-session']);
     sessionStorage.removeItem("usuario");
+    
   }
 
   public Esconderboton(){
-    this.isUserLogged
-  }
+    //const $botoncerrarsesion = document.querySelector('#botoncerrarsesion');
+   // $botonListar.setAttribute('disabled', 'disabled');
+  
+    //if(this.isUserLogged){
+      
+
+    }
+    
+  
+
+  
 
 
       //Cerrar sesión
